@@ -32,26 +32,26 @@ class ErrorController extends AppController
      */
     public function initialize(): void
     {
-        // Only add parent::initialize() if you are confident your `AppController` is safe.
+        $this->loadComponent('RequestHandler');
     }
 
     /**
      * beforeFilter callback.
      *
-     * @param \Cake\Event\EventInterface<\Cake\Controller\Controller> $event Event.
-     * @return void
+     * @param \Cake\Event\EventInterface $event Event.
+     * @return \Cake\Http\Response|null|void
      */
-    public function beforeFilter(EventInterface $event): void
+    public function beforeFilter(EventInterface $event)
     {
     }
 
     /**
      * beforeRender callback.
      *
-     * @param \Cake\Event\EventInterface<\Cake\Controller\Controller> $event Event.
-     * @return void
+     * @param \Cake\Event\EventInterface $event Event.
+     * @return \Cake\Http\Response|null|void
      */
-    public function beforeRender(EventInterface $event): void
+    public function beforeRender(EventInterface $event)
     {
         parent::beforeRender($event);
 
@@ -61,10 +61,10 @@ class ErrorController extends AppController
     /**
      * afterFilter callback.
      *
-     * @param \Cake\Event\EventInterface<\Cake\Controller\Controller> $event Event.
-     * @return void
+     * @param \Cake\Event\EventInterface $event Event.
+     * @return \Cake\Http\Response|null|void
      */
-    public function afterFilter(EventInterface $event): void
+    public function afterFilter(EventInterface $event)
     {
     }
 }

@@ -1,7 +1,4 @@
 <?php
-
-use function Cake\Core\env;
-
 /*
  * Local configuration file to provide any overrides to your app.php configuration.
  * Copy and save this file as app_local.php and make changes as required.
@@ -73,7 +70,7 @@ return [
             'password' => 'secret',
             'database' => 'test_myapp',
             //'schema' => 'myapp',
-            'url' => env('DATABASE_TEST_URL', 'sqlite://127.0.0.1/tmp/tests.sqlite'),
+            'url' => env('DATABASE_TEST_URL', 'sqlite://127.0.0.1/tests.sqlite'),
         ],
     ],
 
