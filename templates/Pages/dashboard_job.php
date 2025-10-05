@@ -28,7 +28,11 @@
                         <div class="row mb-4">
                             <div class="col-lg-12">
                                 <div class="d-flex align-items-center">
-                                    <img src="/images/users/avatar-1.jpg" alt="" class="avatar-sm rounded">
+                                    <!--img src="/images/users/avatar-1.jpg" alt="" class="avatar-sm rounded"-->
+                                    <?= $this->Html->image('/images/users/avatar-1.jpg', [
+                                        'alt'   => '',
+                                        'class' => 'avatar-sm rounded',
+                                    ]) ?>
                                     <div class="ms-3 flex-grow-1">
                                         <h5 class="mb-2 card-title">Hello, Henry Franklin</h5>
                                         <p class="text-muted mb-0">Ready to jump back in?</p>
@@ -168,7 +172,11 @@
                                             <div class="carousel-inner">
                                                 <div class="carousel-item active" data-bs-interval="3000">
                                                     <div class="bg-light p-3 d-flex mb-3 rounded">
-                                                        <img src="/images/users/avatar-4.jpg" alt="" class="avatar-sm rounded me-3">
+                                                        <!--img src="/images/users/avatar-4.jpg" alt="" class="avatar-sm rounded me-3"-->
+                                                        <?= $this->Html->image('/images/users/avatar-4.jpg', [
+                                                            'alt'   => '',
+                                                            'class' => 'avatar-sm rounded me-3',
+                                                        ]) ?>
                                                         <div class="flex-grow-1">
                                                             <h5 class="font-size-15 mb-2"><a href="candidate-overview" class="text-body">Stephen Hadley</a> <span class="badge badge-soft-info">Freelance</span></h5>
                                                             <p class="mb-0 text-muted"><i class="bx bx-map text-body align-middle"></i> Germany</p>
@@ -206,7 +214,11 @@
                                                 </div>
                                                 <div class="carousel-item" data-bs-interval="3000">
                                                     <div class="bg-light p-3 d-flex mb-3 rounded">
-                                                        <img src="/images/users/avatar-1.jpg" alt="" class="avatar-sm rounded me-3">
+                                                        <!--img src="/images/users/avatar-1.jpg" alt="" class="avatar-sm rounded me-3"-->
+                                                        <?= $this->Html->image('/images/users/avatar-1.jpg', [
+                                                            'alt'   => '',
+                                                            'class' => 'avatar-sm rounded me-3',
+                                                        ]) ?>
                                                         <div class="flex-grow-1">
                                                             <h5 class="font-size-15 mb-2"><a href="candidate-overview" class="text-body">Adam Miller</a> <span class="badge badge-soft-warning">Internship</span></h5>
                                                             <p class="mb-0 text-muted"><i class="bx bx-map text-body align-middle"></i> Australia</p>
@@ -224,7 +236,12 @@
                                                         </div>
                                                     </div>
                                                     <div class="bg-light p-3 d-flex">
-                                                        <img src="/images/users/avatar-3.jpg" alt="" class="avatar-sm rounded me-3">
+                                                        <!--img src="/images/users/avatar-3.jpg" alt="" class="avatar-sm rounded me-3"-->
+                                                        <?= $this->Html->image('/images/users/avatar-3.jpg', [
+                                                            'alt'   => '',
+                                                            'class' => 'avatar-sm rounded me-3',
+                                                        ]) ?>
+
                                                         <div class="flex-grow-1">
                                                             <h5 class="font-size-15 mb-2"><a href="candidate-overview" class="text-body">Keith Gonzales</a> <span class="badge badge-soft-info">Freelance</span></h5>
                                                             <p class="mb-0 text-muted"><i class="bx bx-map text-body align-middle"></i> Belgium</p>
@@ -244,7 +261,11 @@
                                                 </div>
                                                 <div class="carousel-item" data-bs-interval="3000">
                                                     <div class="bg-light p-3 d-flex mb-3 rounded">
-                                                        <img src="/images/users/avatar-4.jpg" alt="" class="avatar-sm rounded me-3">
+                                                        <!--img src="/images/users/avatar-4.jpg" alt="" class="avatar-sm rounded me-3"-->
+                                                        <?= $this->Html->image('/images/users/avatar-4.jpg', [
+                                                            'alt'   => '',
+                                                            'class' => 'avatar-sm rounded me-3',
+                                                        ]) ?>
                                                         <div class="flex-grow-1">
                                                             <h5 class="font-size-15 mb-2"><a href="candidate-overview" class="text-body">Bonnie Harney</a> <span class="badge badge-soft-success">Full Timer</span></h5>
                                                             <p class="mb-0 text-muted"><i class="bx bx-map text-body align-middle"></i> Syria</p>

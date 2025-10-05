@@ -23,7 +23,10 @@
                                         </div>
                                     </div>
                                     <div class="col-5 align-self-end">
-                                        <img src="/images/profile-img.png" alt="" class="img-fluid">
+                                        <!--img src="/images/profile-img.png" alt="" class="img-fluid"-->
+                                        <?= $this->Html->image('/images/profile-img.png', [
+                                                'alt'   => '',
+                                                'class' => 'img-fluid',] ) ?>
                                     </div>
                                 </div>
                             </div>
@@ -32,7 +35,12 @@
                                     <a href="home">
                                         <div class="avatar-md profile-user-wid mb-4">
                                             <span class="avatar-title rounded-circle bg-light">
-                                                <img src="/images/logo.svg" alt="" class="rounded-circle" height="34">
+                                                <!--img src="/images/logo.svg" alt="" class="rounded-circle" height="34"-->
+                                                 <?= $this->Html->image('/images/logo.svg', [
+                                                     'alt' => 'Bills-Logo',
+                                                     'height' => '34',
+                                                     'class' => 'rounded-circle'
+                                                 ]) ?>
                                             </span>
                                         </div>
                                     </a>
@@ -71,6 +79,7 @@
         <?= $this->element('vendor-scripts') ?>
         
         <!-- App js -->
-        <script src="/js/app.js"></script>
+        <!--script src="/js/app.js"></script-->
+        <?= $this->Html->script('/js/app') ?>
     </body>
 </html>

@@ -551,7 +551,11 @@
                             <div class="card text-center team-box">
                                 <div class="card-body">
                                     <div>
-                                        <img src="/images/users/avatar-3.jpg" alt="" class="rounded">
+                                        <!--img src="/images/users/avatar-3.jpg" alt="" class="rounded"-->
+                                        <?= $this->Html->image('/images/users/avatar-3.jpg', [
+                                            'alt'   => '',
+                                            'class' => 'rounded',
+                                        ]) ?>
                                     </div>
     
                                     <div class="mt-3">
@@ -650,7 +654,11 @@
                             <div class="card text-center team-box">
                                 <div class="card-body">
                                     <div>
-                                        <img src="/images/users/avatar-1.jpg" alt="" class="rounded">
+                                        <!--img src="/images/users/avatar-1.jpg" alt="" class="rounded"-->
+                                        <?= $this->Html->image('/images/users/avatar-1.jpg', [
+                                            'alt'   => '',
+                                            'class' => 'rounded',
+                                        ]) ?>
                                     </div>
     
                                     <div class="mt-3">

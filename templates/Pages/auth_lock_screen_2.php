@@ -5,9 +5,13 @@
         <?= $this->element('title-meta', array('title' => 'Lock Screen 2')) ?>
 
         <!-- owl.carousel css -->
-        <link rel="stylesheet" href="/libs/owl.carousel/assets/owl.carousel.min.css">
+        <!--link rel="stylesheet" href="/libs/owl.carousel/assets/owl.carousel.min.css"-->
 
-        <link rel="stylesheet" href="/libs/owl.carousel/assets/owl.theme.default.min.css">
+        <!--link rel="stylesheet" href="/libs/owl.carousel/assets/owl.theme.default.min.css"-->
+
+        <?= $this->Html->css([
+                '/libs/owl.carousel/assets/owl.carousel.min',
+                '/libs/owl.carousel/assets/owl.theme.default.min',]) ?>
 
         <?= $this->element('head-css') ?>
 
@@ -76,8 +80,17 @@
                                 <div class="d-flex flex-column h-100">
                                     <div class="mb-4 mb-md-5">
                                         <a href="home" class="d-block auth-logo">
-                                            <img src="/images/logo-dark.png" alt="" height="18" class="auth-logo-dark">
-                                            <img src="/images/logo-light.png" alt="" height="18" class="auth-logo-light">
+                                            <!--img src="/images/logo-dark.png" alt="" height="18" class="auth-logo-dark"-->
+                                            <?= $this->Html->image('/images/logo-dark.png', [
+                                                    'alt'   => '',
+                                                    'height' => '18',
+                                                    'class' => 'auth-logo-dark',] ) ?>
+
+                                            <!--img src="/images/logo-light.png" alt="" height="18" class="auth-logo-light"-->
+                                            <?= $this->Html->image('/images/logo-light.png', [
+                                                    'alt'    => '',
+                                                    'height' => '18',
+                                                    'class'  => 'auth-logo-light',] ) ?>
                                         </a>
                                     </div>
                                     <div class="my-auto">
@@ -91,7 +104,11 @@
                                             <form class="form-horizontal" action="home">
             
                                                 <div class="user-thumb text-center mb-4">
-                                                    <img src="/images/users/avatar-1.jpg" class="rounded-circle img-thumbnail avatar-md" alt="thumbnail">
+                                                    <!--img src="/images/users/avatar-1.jpg" class="rounded-circle img-thumbnail avatar-md" alt="thumbnail"-->
+                                                    <?= $this->Html->image('/images/users/avatar-1.jpg', [
+                                                        'alt'   => 'thumbnail',
+                                                        'class' => 'rounded-circle img-thumbnail avatar-md',
+                                                    ]) ?>
                                                     <h5 class="font-size-15 mt-3">Maria Laird</h5>
                                                 </div>
                             
@@ -131,13 +148,18 @@
         <?= $this->element('vendor-scripts') ?>
 
         <!-- owl.carousel js -->
-        <script src="/libs/owl.carousel/owl.carousel.min.js"></script>
+        <!--script src="/libs/owl.carousel/owl.carousel.min.js"></script-->
 
         <!-- auth-2-carousel init -->
-        <script src="/js/pages/auth-2-carousel.init.js"></script>
+        <!--script src="/js/pages/auth-2-carousel.init.js"></script-->
         
         <!-- App js -->
-        <script src="/js/app.js"></script>
+        <!--script src="/js/app.js"></script-->
+
+        <?= $this->Html->script([
+                '/libs/owl.carousel/owl.carousel.min',
+                '/js/pages/auth-2-carousel.init',
+                '/js/app', ]) ?>
 
     </body>
 </html>

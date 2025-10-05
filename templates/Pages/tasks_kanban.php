@@ -127,17 +127,26 @@
                                                         <div class="avatar-group float-start task-assigne">
                                                             <div class="avatar-group-item">
                                                                 <a href="javascript: void(0);" class="d-inline-block" value="member-1">
-                                                                    <img src="/images/users/avatar-1.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                    <!--img src="/images/users/avatar-1.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                    <?= $this->Html->image('/images/users/avatar-1.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',] ) ?>
                                                                 </a>
                                                             </div>
                                                             <div class="avatar-group-item">
                                                                 <a href="javascript: void(0);" class="d-inline-block" value="member-2">
-                                                                    <img src="/images/users/avatar-2.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                    <!--img src="/images/users/avatar-2.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                    <?= $this->Html->image('/images/users/avatar-2.jpg', [
+                                                                        'alt'   => '',
+                                                                        'class' => 'rounded-circle avatar-xs',] ) ?>
                                                                 </a>
                                                             </div>
                                                             <div class="avatar-group-item">
                                                                 <a href="javascript: void(0);" class="d-inline-block" value="member-5">
-                                                                    <img src="/images/users/avatar-5.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                    <!--img src="/images/users/avatar-5.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                    <?= $this->Html->image('/images/users/avatar-5.jpg', [
+                                                                        'alt'   => '',
+                                                                        'class' => 'rounded-circle avatar-xs',] ) ?>
                                                                 </a>
                                                             </div>
                                                         </div>
@@ -462,7 +471,11 @@
                                                             </div>
                                                             <div class="avatar-group-item">
                                                                 <a href="javascript: void(0);" class="d-inline-block" value="member-3">
-                                                                    <img src="/images/users/avatar-3.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                    <!--img src="/images/users/avatar-3.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                    <?= $this->Html->image('/images/users/avatar-3.jpg', [
+                                                                        'alt'   => '',
+                                                                        'class' => 'rounded-circle avatar-xs',
+                                                                    ]) ?>
                                                                 </a>
                                                             </div>
                                                         </div>
@@ -653,56 +666,88 @@
                                                 <div class="form-check form-check-primary mb-2 d-flex align-items-center">
                                                     <input class="form-check-input" type="checkbox" id="member-1" name="member[]">
                                                     <label class="form-check-label ms-2" for="member-1">Albert Rodarte</label>
-                                                    <img src="/images/users/avatar-1.jpg" class="rounded-circle avatar-xs m-1" alt="">
+                                                    <!--img src="/images/users/avatar-1.jpg" class="rounded-circle avatar-xs m-1" alt=""-->
+                                                    <?= $this->Html->image('/images/users/avatar-1.jpg', [
+                                                        'alt'   => '',
+                                                        'class' => 'rounded-circle avatar-xs m-1',
+                                                    ]) ?>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="form-check form-check-primary mb-2 d-flex align-items-center">
                                                     <input class="form-check-input" type="checkbox" id="member-2" name="member[]">
                                                     <label class="form-check-label ms-2" for="member-2">Hannah Glover</label>
-                                                    <img src="/images/users/avatar-2.jpg" class="rounded-circle avatar-xs m-1" alt="">
+                                                    <!--img src="/images/users/avatar-2.jpg" class="rounded-circle avatar-xs m-1" alt=""-->
+                                                    <?= $this->Html->image('/images/users/avatar-2.jpg', [
+                                                        'alt'   => '',
+                                                        'class' => 'rounded-circle avatar-xs m-1',
+                                                    ]) ?>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="form-check form-check-primary mb-2 d-flex align-items-center">
                                                     <input class="form-check-input" type="checkbox" id="member-3" name="member[]">
                                                     <label class="form-check-label ms-2" for="member-3">Adrian Rodarte</label>
-                                                    <img src="/images/users/avatar-3.jpg" class="rounded-circle avatar-xs m-1" alt="">
+                                                    <!--img src="/images/users/avatar-3.jpg" class="rounded-circle avatar-xs m-1" alt=""-->
+                                                    <?= $this->Html->image('/images/users/avatar-3.jpg', [
+                                                        'alt'   => '',
+                                                        'class' => 'rounded-circle avatar-xs m-1',
+                                                    ]) ?>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="form-check form-check-primary mb-2 d-flex align-items-center">
                                                     <input class="form-check-input" type="checkbox" id="member-4" name="member[]">
                                                     <label class="form-check-label ms-2" for="member-4">Frank Hamilton</label>
-                                                    <img src="/images/users/avatar-4.jpg" class="rounded-circle avatar-xs m-1" alt="">
+                                                    <!--img src="/images/users/avatar-4.jpg" class="rounded-circle avatar-xs m-1" alt=""-->
+                                                    <?= $this->Html->image('/images/users/avatar-4.jpg', [
+                                                        'alt'   => '',
+                                                        'class' => 'rounded-circle avatar-xs m-1',
+                                                    ]) ?>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="form-check form-check-primary mb-2 d-flex align-items-center">
                                                     <input class="form-check-input" type="checkbox" id="member-5" name="member[]">
                                                     <label class="form-check-label ms-2" for="member-5">Justin Howard</label>
-                                                    <img src="/images/users/avatar-5.jpg" class="rounded-circle avatar-xs m-1" alt="">
+                                                    <!--img src="/images/users/avatar-5.jpg" class="rounded-circle avatar-xs m-1" alt=""-->
+                                                    <?= $this->Html->image('/images/users/avatar-5.jpg', [
+                                                        'alt'   => '',
+                                                        'class' => 'rounded-circle avatar-xs m-1',
+                                                    ]) ?>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="form-check form-check-primary mb-2 d-flex align-items-center">
                                                     <input class="form-check-input" type="checkbox" id="member-6" name="member[]">
                                                     <label class="form-check-label ms-2" for="member-6">Michael Lawrence</label>
-                                                    <img src="/images/users/avatar-6.jpg" class="rounded-circle avatar-xs m-1" alt="">
+                                                    <!--img src="/images/users/avatar-6.jpg" class="rounded-circle avatar-xs m-1" alt=""-->
+                                                    <?= $this->Html->image('/images/users/avatar-6.jpg', [
+                                                        'alt'   => '',
+                                                        'class' => 'rounded-circle avatar-xs m-1',
+                                                    ]) ?>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="form-check form-check-primary mb-2 d-flex align-items-center">
                                                     <input class="form-check-input" type="checkbox" id="member-7" name="member[]">
                                                     <label class="form-check-label ms-2" for="member-7">Oliver Sharp</label>
-                                                    <img src="/images/users/avatar-7.jpg" class="rounded-circle avatar-xs m-1" alt="">
+                                                    <!--img src="/images/users/avatar-7.jpg" class="rounded-circle avatar-xs m-1" alt=""-->
+                                                    <?= $this->Html->image('/images/users/avatar-7.jpg', [
+                                                        'alt'   => '',
+                                                        'class' => 'rounded-circle avatar-xs m-1',
+                                                    ]) ?>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="form-check form-check-primary mb-2 d-flex align-items-center">
                                                     <input class="form-check-input" type="checkbox" id="member-8" name="member[]">
                                                     <label class="form-check-label ms-2" for="member-8">Richard Simpson</label>
-                                                    <img src="/images/users/avatar-8.jpg" class="rounded-circle avatar-xs m-1" alt="">
+                                                    <!--img src="/images/users/avatar-8.jpg" class="rounded-circle avatar-xs m-1" alt=""-->
+                                                    <?= $this->Html->image('/images/users/avatar-8.jpg', [
+                                                        'alt'   => '',
+                                                        'class' => 'rounded-circle avatar-xs m-1',
+                                                    ]) ?>
                                                 </div>
                                             </li>
                                         </ul>

@@ -4,9 +4,14 @@
 
         <?= $this->element('title-meta', array('title' => 'TUI Calendar')) ?>
 
-        <link rel="stylesheet" type="text/css" href="/libs/tui-time-picker/tui-time-picker.min.css">
-        <link rel="stylesheet" type="text/css" href="/libs/tui-date-picker/tui-date-picker.min.css">
-        <link href="/libs/tui-calendar/tui-calendar.min.css" rel="stylesheet" type="text/css" />
+        <!--link rel="stylesheet" type="text/css" href="/libs/tui-time-picker/tui-time-picker.min.css"-->
+        <!--link rel="stylesheet" type="text/css" href="/libs/tui-date-picker/tui-date-picker.min.css"-->
+        <!--link href="/libs/tui-calendar/tui-calendar.min.css" rel="stylesheet" type="text/css" /-->
+
+        <?= $this->Html->css([
+                '/libs/tui-time-picker/tui-time-picker.min',
+                '/libs/tui-date-picker/tui-date-picker.min',
+                '/libs/tui-calendar/tui-calendar.min', ]) ?>
 
         <?= $this->element('head-css') ?>
 
@@ -150,7 +155,7 @@
         
         <?= $this->element('vendor-scripts') ?>
 
-        <script src="https://uicdn.toast.com/tui.code-snippet/latest/tui-code-snippet.min.js"></script>
+        <!--script src="https://uicdn.toast.com/tui.code-snippet/latest/tui-code-snippet.min.js"></script>
         <script src="/libs/tui-dom/tui-dom.min.js"></script>
 
         <script src="/libs/tui-time-picker/tui-time-picker.min.js"></script>
@@ -165,8 +170,21 @@
         <script src="/js/pages/schedules.js"></script>
         <script src="/js/pages/calendar.init.js"></script>
 
-        <!-- App js -->
-        <script src="/js/app.js"></script>
+
+        <script src="/js/app.js"></script-->
+
+    <?= $this->Html->script([
+            'https://uicdn.toast.com/tui.code-snippet/latest/tui-code-snippet.min.js',
+            '/libs/tui-dom/tui-dom.min',
+            '/libs/tui-time-picker/tui-time-picker.min',
+            '/libs/tui-date-picker/tui-date-picker.min',
+            '/libs//moment/min/moment.min',
+            '/libs/chance/chance.min',
+            '/libs/tui-calendar/tui-calendar.min',
+            '/js/pages/calendars',
+            '/js/pages/schedules',
+            '/js/pages/calendar.init',
+            '/js/app', ]) ?>
 
     </body>
 </html>

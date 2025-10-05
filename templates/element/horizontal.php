@@ -5,19 +5,34 @@
             <div class="navbar-brand-box">
                 <a href="home" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="/images/logo.svg" alt="" height="22">
+                        <!--img src="/images/logo.svg" alt="" height="22"-->
+                        <?= $this->Html->image('/images/logo.svg', [
+                            'alt' => 'Bills-Logo',
+                            'height' => '22'
+                        ]) ?>
+
                     </span>
                     <span class="logo-lg">
-                        <img src="/images/logo-dark.png" alt="" height="17">
+                        <!--img src="/images/logo-dark.png" alt="" height="17"-->
+                         <?= $this->Html->image('/images/logo-dark.png', [
+                             'alt' => 'logo-dark',
+                             'height' => '17'
+                         ]) ?>
                     </span>
                 </a>
 
                 <a href="home" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="/images/logo-light.svg" alt="" height="22">
+                        <!--img src="/images/logo-light.svg" alt="" height="22"-->
+                        <?= $this->Html->image('/images/logo-light.svg', [
+                                'alt'   => '',
+                                'height' => '22', ] ) ?>
                     </span>
                     <span class="logo-lg">
-                        <img src="/images/logo-light.png" alt="" height="19">
+                        <!--img src="/images/logo-light.png" alt="" height="19"-->
+                        <?= $this->Html->image('/images/logo-light.png', [
+                                'alt'   => '',
+                                'height' => '19', ] ) ?>
                     </span>
                 </a>
             </div>
@@ -155,7 +170,11 @@
 
                                 <div class="col-sm-5">
                                     <div>
-                                        <img src="/images/megamenu-img.png" alt="" class="img-fluid mx-auto d-block">
+                                        <!--img src="/images/megamenu-img.png" alt="" class="img-fluid mx-auto d-block"-->
+                                        <?= $this->Html->image('/images/megamenu-img.png', [
+                                            'alt' => 'megamenu-img',
+                                            'class' => 'img-fluid mx-auto d-block',
+                                        ]) ?>
                                     </div>
                                 </div>
                             </div>
@@ -191,32 +210,65 @@
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item waves-effect"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img id="header-lang-img" src="/images/flags/us.jpg" alt="Header Language" height="16">
+                    <!--img id="header-lang-img" src="/images/flags/us.jpg" alt="Header Language" height="16" -->
+                    <?= $this->Html->image('/images/flags/us.jpg', [
+                        'alt' => 'Header Language',
+                        'height' => '16',
+                        ]) ?>
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
 
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="eng">
-                        <img src="/images/flags/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
+
+                        <!--img src="/images/flags/us.jpg" alt="user-image" class="me-1" height="12" -->
+                        <?= $this->Html->image('/images/flags/us.jpg', [
+                            'alt' => 'user-image',
+                            'class' => 'me-1',
+                            'height' => '12',
+                        ]) ?>
+                        <span class="align-middle">English</span>
                     </a>
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp">
-                        <img src="/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
+                        <!--img src="/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"-->
+                        <?= $this->Html->image('/images/flags/spain.jpg', [
+                            'alt'   => 'user-image',
+                            'height' => '12',
+                            'class' => 'me-1',] ) ?>
+                        <span class="align-middle">Spanish</span>
+
                     </a>
 
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="gr">
-                        <img src="/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
+                        <!--img src="/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"-->
+                        <?= $this->Html->image('/images/flags/germany.jpg', [
+                            'alt'   => 'user-image',
+                            'height' => '12',
+                            'class' => 'me-1',] ) ?>
+                        <span class="align-middle">German</span>
                     </a>
 
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="it">
-                        <img src="/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
+                        <!--img src="/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"-->
+                        <?= $this->Html->image('/images/flags/italy.jpg', [
+                            'alt'   => 'user-image',
+                            'height' => '12',
+                            'class' => 'me-1',] ) ?>
+                        <span class="align-middle">Italian</span>
                     </a>
 
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ru">
-                        <img src="/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
+                        <!--img src="/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"-->
+                        <?= $this->Html->image('/images/flags/russia.jpg', [
+                            'alt'   => 'user-image',
+                            'height' => '12',
+                            'class' => 'me-1',] ) ?>
+                        <span class="align-middle">Russian</span>
+
                     </a>
                 </div>
             </div>
@@ -231,19 +283,25 @@
                         <div class="row g-0">
                             <div class="col">
                                 <a class="dropdown-icon-item" href="#">
-                                    <img src="/images/brands/github.png" alt="Github">
+                                    <!--img src="/images/brands/github.png" alt="Github"-->
+                                    <?= $this->Html->image('/images/brands/github.png', [
+                                            'alt'   => 'Github', ] ) ?>
                                     <span>GitHub</span>
                                 </a>
                             </div>
                             <div class="col">
                                 <a class="dropdown-icon-item" href="#">
-                                    <img src="/images/brands/bitbucket.png" alt="bitbucket">
+                                    <!--img src="/images/brands/bitbucket.png" alt="bitbucket"-->
+                                    <?= $this->Html->image('/images/brands/bitbucket.png', [
+                                        'alt'   => 'bitbucket', ] ) ?>
                                     <span>Bitbucket</span>
                                 </a>
                             </div>
                             <div class="col">
                                 <a class="dropdown-icon-item" href="#">
-                                    <img src="/images/brands/dribbble.png" alt="dribbble">
+                                    <!--img src="/images/brands/dribbble.png" alt="dribbble"-->
+                                    <?= $this->Html->image('/images/brands/dribbble.png', [
+                                        'alt'   => 'dribbble', ] ) ?>
                                     <span>Dribbble</span>
                                 </a>
                             </div>
@@ -252,19 +310,25 @@
                         <div class="row no-gutters">
                             <div class="col">
                                 <a class="dropdown-icon-item" href="#">
-                                    <img src="/images/brands/dropbox.png" alt="dropbox">
+                                    <i!--mg src="/images/brands/dropbox.png" alt="dropbox"-->
+                                    <?= $this->Html->image('/images/brands/dropbox.png', [
+                                        'alt'   => 'dropbox', ] ) ?>
                                     <span>Dropbox</span>
                                 </a>
                             </div>
                             <div class="col">
                                 <a class="dropdown-icon-item" href="#">
-                                    <img src="/images/brands/mail_chimp.png" alt="mail_chimp">
+                                    <!--img src="/images/brands/mail_chimp.png" alt="mail_chimp"-->
+                                    <?= $this->Html->image('/images/brands/mail_chimp.png', [
+                                        'alt'   => 'mail_chimp', ] ) ?>
                                     <span>Mail Chimp</span>
                                 </a>
                             </div>
                             <div class="col">
                                 <a class="dropdown-icon-item" href="#">
-                                    <img src="/images/brands/slack.png" alt="slack">
+                                    <!--img src="/images/brands/slack.png" alt="slack"-->
+                                    <?= $this->Html->image('/images/brands/slack.png', [
+                                        'alt'   => 'slack', ] ) ?>
                                     <span>Slack</span>
                                 </a>
                             </div>
@@ -316,8 +380,12 @@
                         </a>
                         <a href="javascript: void(0);" class="text-reset notification-item">
                             <div class="d-flex">
-                                <img src="/images/users/avatar-3.jpg"
-                                    class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                <!--img src="/images/users/avatar-3.jpg"
+                                    class="me-3 rounded-circle avatar-xs" alt="user-pic"-->
+                                <?= $this->Html->image('/images/users/avatar-3.jpg', [
+                                    'alt'   => 'product-img',
+                                    'class' => 'me-3 rounded-circle avatar-xs',
+                                ]) ?>
                                 <div class="flex-grow-1">
                                     <h6 class="mb-1">James Lemire</h6>
                                     <div class="font-size-12 text-muted">
@@ -346,8 +414,12 @@
 
                         <a href="javascript: void(0);" class="text-reset notification-item">
                             <div class="d-flex">
-                                <img src="/images/users/avatar-4.jpg"
-                                    class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                <!--img src="/images/users/avatar-4.jpg"
+                                    class="me-3 rounded-circle avatar-xs" alt="user-pic"-->
+                                <?= $this->Html->image('/images/users/avatar-4.jpg', [
+                                    'alt'   => 'user-pic',
+                                    'class' => 'me-3 rounded-circle avatar-xs',
+                                ]) ?>
                                 <div class="flex-grow-1">
                                     <h6 class="mb-1">Salena Layfield</h6>
                                     <div class="font-size-12 text-muted">
@@ -369,8 +441,12 @@
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user" src="/images/users/avatar-1.jpg"
-                        alt="Header Avatar">
+                    <!--img class="rounded-circle header-profile-user" src="/images/users/avatar-1.jpg"
+                        alt="Header Avatar"-->
+                    <?= $this->Html->image('/images/users/avatar-1.jpg', [
+                        'alt'   => 'Header Avatar',
+                        'class' => 'rounded-circle header-profile-user',
+                    ]) ?>
                     <span class="d-none d-xl-inline-block ms-1" key="t-henry">Henry</span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                 </button>

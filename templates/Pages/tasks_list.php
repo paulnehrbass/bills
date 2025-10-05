@@ -77,12 +77,20 @@
                                                             <div class="avatar-group">
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-1.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-1.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-1.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-2.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-2.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-2.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                                 <div class="avatar-group-item">
@@ -96,7 +104,11 @@
                                                                 </div>
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-6.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-6.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-6.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -122,7 +134,11 @@
                                                             <div class="avatar-group">
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-3.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-3.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-3.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                                 <div class="avatar-group-item">
@@ -136,7 +152,11 @@
                                                                 </div>
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-5.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-5.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-5.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -173,12 +193,20 @@
                                                             <div class="avatar-group">
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-4.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-4.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-4.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-5.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-5.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-5.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -213,7 +241,11 @@
                                                                 </div>
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-2.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-2.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-2.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -250,12 +282,20 @@
                                                             <div class="avatar-group">
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-4.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-4.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-4.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-5.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-5.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-5.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                                 <div class="avatar-group-item">
@@ -269,7 +309,11 @@
                                                                 </div>
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-2.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-2.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-2.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -295,17 +339,29 @@
                                                             <div class="avatar-group">
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-8.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-8.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-8.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-6.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-6.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-6.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-4.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-4.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-4.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -331,17 +387,29 @@
                                                             <div class="avatar-group">
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-4.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-4.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-4.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-5.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-5.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-5.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-2.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-2.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-2.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                                 <div class="avatar-group-item">
@@ -393,12 +461,20 @@
                                                             <div class="avatar-group">
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-4.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-4.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-4.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-5.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-5.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-5.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -412,17 +488,28 @@
                                                             <div class="avatar-group">
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-1.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-1.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-1.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-2.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-2.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-2.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </a>
                                                                 </div>
                                                                 <div class="avatar-group-item">
                                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                                        <img src="/images/users/avatar-3.jpg" alt="" class="rounded-circle avatar-xs">
+                                                                        <!--img src="/images/users/avatar-3.jpg" alt="" class="rounded-circle avatar-xs"-->
+                                                                        <?= $this->Html->image('/images/users/avatar-3.jpg', [
+                                                                                'alt'   => '',
+                                                                                'class' => 'rounded-circle avatar-xs',] ) ?>
                                                                     </a>
                                                                 </div>
                                                                 <div class="avatar-group-item">

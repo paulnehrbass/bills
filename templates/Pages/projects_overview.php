@@ -89,7 +89,13 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td><img src="/images/users/avatar-1.jpg" class="rounded-circle avatar-xs" alt=""></td>
+                                                        <td>
+                                                            <!--img src="/images/users/avatar-1.jpg" class="rounded-circle avatar-xs" alt=""-->
+                                                            <?= $this->Html->image('/images/users/avatar-1.jpg', [
+                                                                'alt'   => '',
+                                                                'class' => 'rounded-circle avatar-xs',
+                                                            ]) ?>
+                                                        </td>
                                                         <td><h5 class="font-size-14 m-0"><a href="javascript: void(0);" class="text-dark">Jennifer Walker</a></h5></td>
                                                         <td>
                                                             <div>
@@ -268,7 +274,11 @@
 
                                         <div class="d-flex mb-4">
                                             <div class="flex-shrink-0 me-3">
-                                                <img class="d-flex-object rounded-circle avatar-xs" alt="" src="/images/users/avatar-3.jpg">
+                                                <!--img class="d-flex-object rounded-circle avatar-xs" alt="" src="/images/users/avatar-3.jpg"-->
+                                                <?= $this->Html->image('/images/users/avatar-3.jpg', [
+                                                    'alt'   => '',
+                                                    'class' => 'd-flex-object rounded-circle avatar-xs',
+                                                ]) ?>
                                             </div>
                                             <div class="flex-grow-1">
                                                 <h5 class="font-size-13 mb-1">Steve Foster</h5>

@@ -68,6 +68,11 @@
                                         <a href="javascript: void(0);" class="d-flex">
                                             <div class="flex-shrink-0 me-3">
                                                 <img class="rounded-circle" src="/images/users/avatar-3.jpg" alt="Generic placeholder image" height="36">
+                                                <?= $this->Html->image('/images/users/avatar-3.jpg', [
+                                                    'alt'   => 'Generic placeholder image',
+                                                    'class' => 'rounded-circle',
+                                                    'height'=>'36',
+                                                ]) ?>
                                             </div>
                                             <div class="flex-grow-1 chat-user-box">
                                                 <p class="user-title m-0">Julian Rosa</p>

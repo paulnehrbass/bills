@@ -60,7 +60,10 @@
                                                 </div>
 
                                                 <div class="row justify-content-center mt-5">
-                                                    <img src="/images/verification-img.png" alt="" class="img-fluid d-block">
+                                                    <!--img src="/images/verification-img.png" alt="" class="img-fluid d-block"-->
+                                                    <?= $this->Html->image('/images/verification-img.png', [
+                                                        'alt'   => '',
+                                                        'class' => 'img-fluid d-block',] ) ?>
                                                 </div>
                                             </div>
                                         </div>
@@ -152,17 +155,25 @@
         <?= $this->element('vendor-scripts') ?>
 
         <!-- plugin js -->
-        <script src="/libs/moment/min/moment.min.js"></script>
+        <!--script src="/libs/moment/min/moment.min.js"></script>
         <script src="/libs/jquery-ui-dist/jquery-ui.min.js"></script>
 
         <script src="/libs/fullcalendar/index.global.min.js"></script>
-        <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.8/locales-all.global.min.js'></script>
+        <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.8/locales-all.global.min.js'></script-->
 
         <!-- Calendar init -->
-        <script src="/js/pages/calendars-full.init.js"></script>
+        <!--script src="/js/pages/calendars-full.init.js"></script-->
 
         <!-- App js -->
-        <script src="/js/app.js"></script>
+        <!--script src="/js/app.js"></script-->
+
+        <?= $this->Html->script([
+                '/libs/moment/min/moment.min.js',
+                '/libs/jquery-ui-dist/jquery-ui.min',
+                '/libs/fullcalendar/index.global.min',
+                'https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.8/locales-all.global.min.js',
+                '/js/pages/calendars-full.init',
+                '/js/app', ]) ?>
 
     </body>
 </html>

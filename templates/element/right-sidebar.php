@@ -16,7 +16,11 @@
 
         <div class="p-4">
             <div class="mb-2">
-                <img src="/images/layouts/layout-1.jpg" class="img-thumbnail" alt="layout images">
+                <!--img src="/images/layouts/layout-1.jpg" class="img-thumbnail" alt="layout images"-->
+                <?= $this->Html->image('/images/layouts/layout-1.jpg', [
+                    'alt'   => 'layout images',
+                    'class' => 'img-thumbnail',
+                ]) ?>
             </div>
 
             <div class="form-check form-switch mb-3">
@@ -25,7 +29,11 @@
             </div>
     
             <div class="mb-2">
-                <img src="/images/layouts/layout-2.jpg" class="img-thumbnail" alt="layout images">
+                <!--img src="/images/layouts/layout-2.jpg" class="img-thumbnail" alt="layout images"-->
+                <?= $this->Html->image('/images/layouts/layout-2.jpg', [
+                    'alt'   => 'layout images',
+                    'class' => 'img-thumbnail',
+                ]) ?>
             </div>
             <div class="form-check form-switch mb-3">
                 <input class="form-check-input theme-choice" type="checkbox" id="dark-mode-switch">
@@ -33,7 +41,11 @@
             </div>
     
             <div class="mb-2">
-                <img src="/images/layouts/layout-3.jpg" class="img-thumbnail" alt="layout images">
+                <!--img src="/images/layouts/layout-3.jpg" class="img-thumbnail" alt="layout images"-->
+                <?= $this->Html->image('/images/layouts/layout-3.jpg', [
+                    'alt'   => 'layout images',
+                    'class' => 'img-thumbnail',
+                ]) ?>
             </div>
             <div class="form-check form-switch mb-3">
                 <input class="form-check-input theme-choice" type="checkbox" id="rtl-mode-switch">
@@ -41,7 +53,11 @@
             </div>
 
             <div class="mb-2">
-                <img src="/images/layouts/layout-4.jpg" class="img-thumbnail" alt="layout images">
+                <!--img src="/images/layouts/layout-4.jpg" class="img-thumbnail" alt="layout images"-->
+                <?= $this->Html->image('/images/layouts/layout-4.jpg', [
+                    'alt'   => 'layout images',
+                    'class' => 'img-thumbnail',
+                ]) ?>
             </div>
             <div class="form-check form-switch mb-5">
                 <input class="form-check-input theme-choice" type="checkbox" id="dark-rtl-mode-switch">

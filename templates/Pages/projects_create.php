@@ -96,7 +96,11 @@
                                                                 <li>
                                                                     <a class="dropdown-item d-flex align-items-center" href="#">
                                                                         <div class="avatar-xs flex-shrink-0 me-2">
-                                                                            <img src="/images/users/avatar-3.jpg" alt="" class="img-fluid rounded-circle" />
+                                                                            <!--img src="/images/users/avatar-3.jpg" alt="" class="img-fluid rounded-circle" /-->
+                                                                            <?= $this->Html->image('/images/users/avatar-3.jpg', [
+                                                                                'alt'   => '',
+                                                                                'class' => 'img-fluid rounded-circle',
+                                                                            ]) ?>
                                                                         </div>
                                                                         <div class="flex-grow-1">Paul Barone</div>
                                                                     </a>
@@ -112,7 +116,11 @@
                                                                 <li>
                                                                     <a class="dropdown-item d-flex align-items-center" href="#">
                                                                         <div class="avatar-xs flex-shrink-0 me-2">
-                                                                            <img src="/images/users/avatar-1.jpg" alt="" class="img-fluid rounded-circle" />
+                                                                            <!--img src="/images/users/avatar-1.jpg" alt="" class="img-fluid rounded-circle" /-->
+                                                                            <?= $this->Html->image('/images/users/avatar-1.jpg', [
+                                                                                'alt'   => '',
+                                                                                'class' => 'img-thumbnail rounded-circle',
+                                                                            ]) ?>
                                                                         </div>
                                                                         <div class="flex-grow-1">Shirley North</div>
                                                                     </a>

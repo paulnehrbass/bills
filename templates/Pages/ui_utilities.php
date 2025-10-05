@@ -344,11 +344,31 @@
                                 <p class="card-title-desc">Use <code>z-index</code> utilities to stack elements on top of one another. Requires a <code>position</code> value other than <code>static</code>, which can be set with custom styles or using our <a href="https://getbootstrap.com/docs/5.3/utilities/position/">position utilities</a>.</p>
 
                                 <div class="position-relative z-1">
-                                    <img src="/images/users/avatar-1.jpg" alt="" class="avatar-xxl rounded position-relative z-n1">
-                                    <img src="/images/users/avatar-2.jpg" alt="" class="avatar-xxl rounded position-relative z-0 ms-n5 mt-5">
-                                    <img src="/images/users/avatar-3.jpg" alt="" class="avatar-xxl rounded position-relative z-1 ms-n5">
-                                    <img src="/images/users/avatar-4.jpg" alt="" class="avatar-xxl rounded position-relative z-2 ms-n5 mt-5">
-                                    <img src="/images/users/avatar-5.jpg" alt="" class="avatar-xxl rounded position-relative z-3 ms-n5">
+                                    <!--img src="/images/users/avatar-1.jpg" alt="" class="avatar-xxl rounded position-relative z-n1"-->
+                                    <?= $this->Html->image('/images/users/avatar-1.jpg', [
+                                        'alt'   => 'Generic placeholder image',
+                                        'class' => 'avatar-xxl rounded position-relative z-n1',
+                                    ]) ?>
+                                    <!--img src="/images/users/avatar-2.jpg" alt="" class="avatar-xxl rounded position-relative z-0 ms-n5 mt-5"-->
+                                    <?= $this->Html->image('/images/users/avatar-2.jpg', [
+                                        'alt'   => '',
+                                        'class' => 'avatar-xxl rounded position-relative z-0 ms-n5 mt-5',
+                                    ]) ?>
+                                    <!--img src="/images/users/avatar-3.jpg" alt="" class="avatar-xxl rounded position-relative z-1 ms-n5"-->
+                                    <?= $this->Html->image('/images/users/avatar-3.jpg', [
+                                        'alt'   => '',
+                                        'class' => 'avatar-xxl rounded position-relative z-1 ms-n5',
+                                    ]) ?>
+                                    <!--img src="/images/users/avatar-4.jpg" alt="" class="avatar-xxl rounded position-relative z-2 ms-n5 mt-5"-->
+                                    <?= $this->Html->image('/images/users/avatar-4.jpg', [
+                                        'alt'   => '',
+                                        'class' => 'avatar-xxl rounded position-relative z-2 ms-n5 mt-5',
+                                    ]) ?>
+                                    <!--img src="/images/users/avatar-5.jpg" alt="" class="avatar-xxl rounded position-relative z-3 ms-n5"-->
+                                    <?= $this->Html->image('/images/users/avatar-5.jpg', [
+                                        'alt'   => '',
+                                        'class' => 'avatar-xxl rounded position-relative z-3 ms-n5',
+                                    ]) ?>
                                 </div>
                             </div>
                         </div>

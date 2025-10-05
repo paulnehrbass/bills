@@ -32,7 +32,11 @@
                                     <div class="py-4 border-bottom">
                                         <div class="d-flex">
                                             <div class="flex-shrink-0 align-self-center me-3">
-                                                <img src="/images/users/avatar-1.jpg" class="avatar-xs rounded-circle" alt="">
+                                                <!--img src="/images/users/avatar-1.jpg" class="avatar-xs rounded-circle" alt=""-->
+                                                <?= $this->Html->image('/images/users/avatar-1.jpg', [
+                                                    'alt'   => '',
+                                                    'class' => 'avatar-xs rounded-circle',
+                                                ]) ?>
                                             </div>
                                             <div class="flex-grow-1">
                                                 <h5 class="font-size-15 mb-1">Henry Wells</h5>
@@ -113,7 +117,11 @@
                                                                         <i class="mdi mdi-circle text-success font-size-10"></i>
                                                                     </div>
                                                                     <div class="flex-shrink-0 align-self-center me-3">
-                                                                        <img src="/images/users/avatar-3.jpg" class="rounded-circle avatar-xs" alt="">
+                                                                        <!--img src="/images/users/avatar-3.jpg" class="rounded-circle avatar-xs" alt=""-->
+                                                                        <?= $this->Html->image('/images/users/avatar-3.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </div>
 
                                                                     <div class="flex-grow-1 overflow-hidden">
@@ -152,7 +160,11 @@
                                                                         <i class="mdi mdi-circle text-warning font-size-10"></i>
                                                                     </div>
                                                                     <div class="flex-shrink-0 align-self-center me-3">
-                                                                        <img src="/images/users/avatar-4.jpg" class="rounded-circle avatar-xs" alt="">
+                                                                        <!--img src="/images/users/avatar-4.jpg" class="rounded-circle avatar-xs" alt=""-->
+                                                                        <?= $this->Html->image('/images/users/avatar-4.jpg', [
+                                                                            'alt'   => '',
+                                                                            'class' => 'rounded-circle avatar-xs',
+                                                                        ]) ?>
                                                                     </div>
                                                                     <div class="flex-grow-1 overflow-hidden">
                                                                         <h5 class="text-truncate font-size-14 mb-1">Jose Vickery</h5>

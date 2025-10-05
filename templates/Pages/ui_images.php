@@ -187,7 +187,11 @@
                                         <!-- Start Media Object -->
                                         <div class="d-flex align-items-end">
                                             <div class="flex-shrink-0 me-3">
-                                                <img class="rounded avatar-sm" src="/images/users/avatar-1.jpg" alt="Generic placeholder image">                                                
+                                                <!--img class="rounded avatar-sm" src="/images/users/avatar-1.jpg" alt="Generic placeholder image"-->
+                                                <?= $this->Html->image('/images/users/avatar-1.jpg', [
+                                                    'alt'   => 'Generic placeholder image',
+                                                    'class' => 'rounded avatar-sm',
+                                                ]) ?>
                                             </div>
                                             <div class="flex-grow-1">
                                                 <h5>Bottom-aligned media</h5>

@@ -4,4 +4,5 @@
 <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
 <meta content="Themesbrand" name="author" />
 <!-- App favicon -->
-<link rel="shortcut icon" href="/images/favicon.ico">
+<!--link rel="shortcut icon" href="/images/favicon.ico" -->
+<?= $this->Html->meta('icon') ?>

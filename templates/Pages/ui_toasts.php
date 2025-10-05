@@ -42,6 +42,7 @@
                                                     <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                                                         <div class="toast-header">
                                                             <img src="/images/logo.svg" alt="" class="me-2" height="18">
+
                                                             <strong class="me-auto">Bootstrap</strong>
                                                             <small>11 mins ago</small>
                                                             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>

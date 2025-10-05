@@ -121,7 +121,10 @@
                                             </div>
                                             <div class="col-lg-3 col-sm-4 align-self-center">
                                                 <div>
-                                                    <img src="/images/crypto/features-img/img-1.png" alt="" class="img-fluid d-block">
+                                                    <!--img src="/images/crypto/features-img/img-1.png" alt="" class="img-fluid d-block"-->
+                                                    <?= $this->Html->image('/images/crypto/features-img/img-1.png', [
+                                                        'alt'   => '',
+                                                        'class' => 'img-fluid d-block',] ) ?>
                                                 </div>
                                             </div>
                                         </div>
@@ -925,7 +928,11 @@
                                                     <div class="flex-shrink-0 me-3">
                                                         <div class="avatar-xs">
                                                             <span class="avatar-title rounded-circle bg-light">
-                                                                <img src="/images/companies/img-1.png" alt="" height="18">
+                                                                <!--img src="/images/companies/img-1.png" alt="" height="18"-->
+                                                                <?= $this->Html->image('/images/companies/img-1.png', [
+                                                                    'alt'   => '',
+                                                                    'height' => '18', ] ) ?>
+
                                                             </span>
                                                         </div>
                                                     </div>
@@ -945,7 +952,11 @@
                                                     <div class="flex-shrink-0 me-3">
                                                         <div class="avatar-xs">
                                                             <span class="avatar-title rounded-circle bg-light">
-                                                                <img src="/images/companies/img-2.png" alt="" height="18">
+                                                                <!--img src="/images/companies/img-2.png" alt="" height="18"-->
+                                                                <?= $this->Html->image('/images/companies/img-2.png', [
+                                                                    'alt'   => '',
+                                                                    'height' => '18',] ) ?>
+
                                                             </span>
                                                         </div>
                                                     </div>
@@ -966,7 +977,10 @@
                                                     <div class="flex-shrink-0 me-3">
                                                         <div class="avatar-xs">
                                                             <span class="avatar-title rounded-circle bg-light">
-                                                                <img src="/images/companies/img-3.png" alt="" height="18">
+                                                                <!--img src="/images/companies/img-3.png" alt="" height="18"-->
+                                                                <?= $this->Html->image('/images/companies/img-3.png', [
+                                                                    'alt'   => '',
+                                                                    'height' => '18',] ) ?>
                                                             </span>
                                                         </div>
                                                     </div>
@@ -987,7 +1001,10 @@
                                                     <div class="flex-shrink-0 me-3">
                                                         <div class="avatar-xs">
                                                             <span class="avatar-title rounded-circle bg-light">
-                                                                <img src="/images/companies/img-1.png" alt="" height="18">
+                                                                <!--img src="/images/companies/img-1.png" alt="" height="18"-->
+                                                                <?= $this->Html->image('/images/companies/img-1.png', [
+                                                                    'alt'   => '',
+                                                                    'height' => '18',] ) ?>
                                                             </span>
                                                         </div>
                                                     </div>
@@ -1138,12 +1155,17 @@
         <?= $this->element('vendor-scripts') ?>
 
         <!-- apexcharts -->
-        <script src="/libs/apexcharts/apexcharts.min.js"></script>
+        <!--script src="/libs/apexcharts/apexcharts.min.js"></script-->
 
         <!-- crypto dash init js -->
-        <script src="/js/pages/crypto-dashboard.init.js"></script>
+        <!--script src="/js/pages/crypto-dashboard.init.js"></script-->
 
-        <script src="/js/app.js"></script>
+        <!--script src="/js/app.js"></script-->
+
+        <?= $this->Html->script([
+                '/libs/apexcharts/apexcharts.min',
+                '/js/pages/crypto-dashboard.init',
+                '/js/app', ]) ?>
 
     </body>
 </html>

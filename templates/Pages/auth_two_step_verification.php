@@ -15,8 +15,19 @@
                 <div class="col-lg-12">
                     <div class="text-center mb-5 text-muted">
                         <a href="home" class="d-block auth-logo">
-                            <img src="/images/logo-dark.png" alt="" height="20" class="auth-logo-dark mx-auto">
-                            <img src="/images/logo-light.png" alt="" height="20" class="auth-logo-light mx-auto">
+
+                            <!--img src="/images/logo-dark.png" alt="" height="20" class="auth-logo-dark mx-auto"-->
+                            <?= $this->Html->image('/images/logo-dark.png', [
+                                    'alt'       => '',
+                                    'height'    => '20',
+                                    'class'     => 'auth-logo-dark mx-auto',] ) ?>
+
+                            <!--img src="/images/logo-light.png" alt="" height="20" class="auth-logo-light mx-auto"-->
+                            <?= $this->Html->image('/images/logo-light.png', [
+                                'alt'       => '',
+                                'height'    => '20',
+                                'class'     => 'auth-logo-light mx-auto',] ) ?>
+
                         </a>
                         <p class="mt-3">Responsive Bootstrap 5 Admin Dashboard</p>
                     </div>
@@ -116,10 +127,14 @@
     <?= $this->element('vendor-scripts') ?>
 
     <!-- two-step-verification js -->
-    <script src="/js/pages/two-step-verification.init.js"></script>
+    <!--script src="/js/pages/two-step-verification.init.js"></script-->
 
     <!-- App js -->
-    <script src="/js/app.js"></script>
+    <!--script src="/js/app.js"></script-->
+
+    <?= $this->Html->script([
+            '/js/pages/two-step-verification.init',
+            '/js/app',]) ?>
 </body>
 
 </html>

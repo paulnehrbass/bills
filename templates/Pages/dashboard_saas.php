@@ -33,7 +33,11 @@
                                             <div class="col-lg-4">
                                                 <div class="d-flex">
                                                     <div class="flex-shrink-0 me-3">
-                                                        <img src="/images/users/avatar-1.jpg" alt="" class="avatar-md rounded-circle img-thumbnail">
+                                                        <!--img src="/images/users/avatar-1.jpg" alt="" class="avatar-md rounded-circle img-thumbnail"-->
+                                                        <?= $this->Html->image('/images/users/avatar-1.jpg', [
+                                                            'alt'   => '',
+                                                            'class' => 'avatar-md rounded-circle img-thumbnail',
+                                                        ]) ?>
                                                     </div>
                                                     <div class="flex-grow-1 align-self-center">
                                                         <div class="text-muted">

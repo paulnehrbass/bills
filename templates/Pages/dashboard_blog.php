@@ -150,7 +150,11 @@
                                     <div class="card-body">
                                         <div class="d-flex">
                                             <div class="flex-shrink-0 me-3">
-                                                <img src="/images/users/avatar-1.jpg" alt="" class="avatar-sm rounded-circle img-thumbnail">
+                                                <!--img src="/images/users/avatar-1.jpg" alt="" class="avatar-sm rounded-circle img-thumbnail"-->
+                                                <?= $this->Html->image('/images/users/avatar-1.jpg', [
+                                                    'alt'   => '',
+                                                    'class' => 'avatar-sm rounded-circle img-thumbnail',
+                                                ]) ?>
                                             </div>
                                             <div class="flex-grow-1">
                                                 <div class="d-flex">

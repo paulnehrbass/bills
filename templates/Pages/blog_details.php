@@ -69,7 +69,10 @@
                                                         <hr>
 
                                                         <div class="my-5">
-                                                            <img src="/images/small/img-2.jpg" alt="" class="img-thumbnail mx-auto d-block">
+                                                            <!--img src="/images/small/img-2.jpg" alt="" class="img-thumbnail mx-auto d-block"-->
+                                                            <?= $this->Html->image('/images/small/img-2.jpg', [
+                                                                    'alt'   => '',
+                                                                    'class' => 'img-thumbnail mx-auto d-block',] ) ?>
                                                         </div>
 
                                                         <hr>
@@ -148,7 +151,10 @@
                                                                     <div class="d-flex py-3 border-top">
                                                                         <div class="flex-shrink-0 me-3">
                                                                             <div class="avatar-xs">
-                                                                                <img src="/images/users/avatar-2.jpg" alt="" class="img-fluid d-block rounded-circle">
+                                                                                <!--img src="/images/users/avatar-2.jpg" alt="" class="img-fluid d-block rounded-circle"-->
+                                                                                <?= $this->Html->image('/images/users/avatar-2.jpg', [
+                                                                                        'alt'   => '',
+                                                                                        'class' => 'img-fluid d-block rounded-circle',] ) ?>
                                                                             </div>
                                                                         </div>
                                                                         
@@ -260,7 +266,8 @@
 
         <?= $this->element('vendor-scripts') ?>
 
-        <script src="/js/app.js"></script>
+        <!--script src="/js/app.js"></script-->
+        <?= $this->Html->script('/js/app.js') ?>
 
     </body>
 </html>
