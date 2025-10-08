@@ -77,7 +77,13 @@ use Cake\Utility\Security;
  * that changes from configuration that does not. This makes deployment simpler.
  */
 try {
+
+
+
     Configure::config('default', new PhpConfig());
+    // Lädt die Datei config/paginator.php
+   //Configure::load('paginator', 'default');
+
     Configure::load('app', 'default', false);
 } catch (\Exception $e) {
     exit($e->getMessage() . "\n");
@@ -225,3 +231,8 @@ TypeFactory::map('time', StringType::class);
 //Inflector::rules('plural', ['/^(inflect)or$/i' => '\1ables']);
 //Inflector::rules('irregular', ['red' => 'redlings']);
 //Inflector::rules('uninflected', ['dontinflectme']);
+
+
+
+
+

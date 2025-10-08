@@ -1,0 +1,166 @@
+{#
+/**
+ * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * @link          https://cakephp.org CakePHP(tm) Project
+ * @since         2.0.0
+ * @license       https://www.opensource.org/licenses/mit-license.php MIT License
+ */
+#}
+<?php
+/**
+ * @var \{{ namespace }}\View\AppView $this
+ * @var iterable<\{{ entityClass }}> ${{ pluralVar }}
+ */
+
+
+
+?>
+
+
+<?= $this->element('main') ?>
+
+<head>
+
+ <?= $this->element('title-meta', array('title' => 'Starter Page')) ?>
+
+ <?= $this->element('head-css') ?>
+
+</head>
+
+<?= $this->element('body') ?>
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+
+ <?= $this->element('menu') ?>
+
+ <!-- ============================================================== -->
+ <!-- Start right Content here -->
+ <!-- ============================================================== -->
+ <div class="main-content">
+
+  <div class="page-content">
+   {% set fields = Bake.filterFields(fields, schema, modelObject, indexColumns, ['binary', 'text']) %}
+
+   <div class="container-fluid">
+    <h3>{{ singularHumanName }} <span class="badge text-bg-success">
+      <?= $this->Html->link(__('New'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+     </span></h3>
+   </div>
+
+
+
+   <nav class="navbar bg-body-tertiary">
+    <div class="container">
+     <a class="navbar-brand" href="#">
+      <!--img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24"-->
+      <?= $this->Html->link(__('New'), ['action' => 'add'], ['width' => '30', 'height'=>'24']) ?>
+     </a>
+    </div>
+   </nav>
+
+
+
+   {% set done = [] %}
+
+
+   <div class="container-fluid">
+
+    <div class="table-responsive">
+
+
+     <table class="table table-light">
+
+      <thead>
+       <tr>
+        {% for field in fields %}
+         <th><?= $this->Paginator->sort('{{ field }}') ?></th>
+        {% endfor %}
+        <th class="actions"><?= __('Actions') ?></th>
+       </tr>
+      </thead>
+      <tbody>
+       <?php foreach (${{ pluralVar }} as ${{ singularVar }}): ?>
+        <tr>
+         {% for field in fields %}
+          {% set isKey = false %}
+          {% if associations.BelongsTo is defined %}
+           {% for alias, details in associations.BelongsTo %}
+            {% if field == details.foreignKey %}
+             {% set isKey = true %}
+             <td><?= ${{ singularVar }}->has('{{ details.property }}') ? $this->Html->link(${{ singularVar }}->{{ details.property }}->{{ details.displayField }}, ['controller' => '{{ details.controller }}', 'action' => 'view', ${{ singularVar }}->{{ details.property }}->{{ details.primaryKey[0] }}]) : '' ?></td>
+            {% endif %}
+           {% endfor %}
+          {% endif %}
+          {% if isKey is not same as(true) %}
+           {% set columnData = Bake.columnData(field, schema) %}
+           {% if columnData.type not in ['integer', 'float', 'decimal', 'biginteger', 'smallinteger', 'tinyinteger'] %}
+            <td><?= h(${{ singularVar }}->{{ field }}) ?></td>
+           {% elseif columnData.null %}
+            <td><?= ${{ singularVar }}->{{ field }} === null ? '' : $this->Number->format(${{ singularVar }}->{{ field }}) ?></td>
+           {% else %}
+            <td><?= $this->Number->format(${{ singularVar }}->{{ field }}) ?></td>
+           {% endif %}
+          {% endif %}
+         {% endfor %}
+         {% set pk = '$' ~ singularVar ~ '->' ~ primaryKey[0] %}
+         <td class="actions">
+          <?= $this->Html->link(__('View'), ['action' => 'view', {{ pk|raw }}]) ?>
+          <?= $this->Html->link(__('Edit'), ['action' => 'edit', {{ pk|raw }}]) ?>
+          <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', {{ pk|raw }}], ['confirm' => __('Are you sure you want to delete # {0}?', {{ pk|raw }})]) ?>
+         </td>
+        </tr>
+       <?php endforeach; ?>
+      </tbody>
+     </table>
+    </div>
+
+
+
+
+    <nav aria-label="Page navigation example">
+     <ul class="pagination justify-content-center">
+      <!--li class="page-item disabled">
+       <a class="page-link">Previous</a>
+      </li-->
+      <?= $this->Paginator->first('<< ') ?>
+      <?= $this->Paginator->prev('< ') ?>
+      <?= $this->Paginator->numbers() ?>
+      <?= $this->Paginator->next(' >') ?>
+      <?= $this->Paginator->last(' >>') ?>
+
+     </ul>
+     <p> <?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total'), ['model' => '{{ pluralHumanName }}']) ?> </p>
+
+    </nav>
+
+
+   </div> <!-- container-fluid -->
+
+  </div>
+  <!-- End Page-content -->
+
+
+  <?= $this->element('footer') ?>
+ </div>
+ <!-- end main content-->
+
+</div>
+<!-- END layout-wrapper -->
+
+<?= $this->element('right-sidebar') ?>
+
+<?= $this->element('vendor-scripts') ?>
+
+<!--script src="/js/app.js"></script-->
+<?= $this->Html->script('/js/app') ?>
+
+</body>
+</html>

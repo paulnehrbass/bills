@@ -58,6 +58,11 @@ class AppController extends Controller
             ],
             'unauthorizedRedirect' => $this->referer()
         ]);
+        // Paginator-Komponente mit globalem Standardlimit laden
+        $this->loadComponent('Paginator', [
+            'limit' => 1, // Standardmäßig 25 Datensätze pro Seite
+            'maxLimit' => 100, // optional: Sicherheitsgrenze
+        ]);
         //$this->Auth->allow(['display', 'view', 'index']);
 
         /*

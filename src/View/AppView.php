@@ -37,5 +37,16 @@ class AppView extends View
      */
     public function initialize(): void
     {
+        parent::initialize();
+        // Paginator-Config aus eigener Datei laden
+        //$paginatorConfig = Configure::readOrFail('Paginator.templates') ?? [];
+
+//        $this->loadHelper('Paginator', [
+//            'templates' => $paginatorConfig
+//        ]);
+        $this->loadHelper('Paginator', [
+            'templates' => 'paginator' ?: []
+        ]);
+
     }
 }
