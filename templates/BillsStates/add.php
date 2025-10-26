@@ -42,7 +42,7 @@
     <aside class="column">
         <div class="side-nav">
             <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Bills States'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+                        <?= $this->Html->link(__('List Bills States'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">
@@ -51,8 +51,8 @@
             <fieldset>
                 <legend><?= __('Add Bills State') ?></legend>
                 <?php
-                    echo $this->Form->control('state');
-                    echo $this->Form->control('description');
+                        echo $this->Form->control('state');
+                        echo $this->Form->control('description');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

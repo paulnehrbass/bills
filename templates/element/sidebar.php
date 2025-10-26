@@ -305,16 +305,16 @@
                         <span key="t-forms">Forms</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="form-elements" key="t-form-elements">Form Elements</a></li>
-                        <li><a href="form-layouts" key="t-form-layouts">Form Layouts</a></li>
-                        <li><a href="form-validation" key="t-form-validation">Form Validation</a></li>
-                        <li><a href="form-advanced" key="t-form-advanced">Form Advanced</a></li>
-                        <li><a href="form-editors" key="t-form-editors">Form Editors</a></li>
-                        <li><a href="form-uploads" key="t-form-upload">Form File Upload</a></li>
-                        <li><a href="form-xeditable" key="t-form-xeditable">Form Xeditable</a></li>
-                        <li><a href="form-repeater" key="t-form-repeater">Form Repeater</a></li>
-                        <li><a href="form-wizard" key="t-form-wizard">Form Wizard</a></li>
-                        <li><a href="form-mask" key="t-form-mask">Form Mask</a></li>
+                        <li><a href="pages/form-elements" key="t-form-elements">Form Elements</a></li>
+                        <li><a href="pages/form-layouts" key="t-form-layouts">Form Layouts</a></li>
+                        <li><a href="pages/form-validation" key="t-form-validation">Form Validation</a></li>
+                        <li><a href="pages/form-advanced" key="t-form-advanced">Form Advanced</a></li>
+                        <li><a href="pages/form-editors" key="t-form-editors">Form Editors</a></li>
+                        <li><a href="pages/form-uploads" key="t-form-upload">Form File Upload</a></li>
+                        <li><a href="pages/form-xeditable" key="t-form-xeditable">Form Xeditable</a></li>
+                        <li><a href="pages/form-repeater" key="t-form-repeater">Form Repeater</a></li>
+                        <li><a href="pages/form-wizard" key="t-form-wizard">Form Wizard</a></li>
+                        <li><a href="pages/form-mask" key="t-form-mask">Form Mask</a></li>
                     </ul>
                 </li>
 
