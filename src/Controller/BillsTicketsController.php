@@ -20,6 +20,7 @@ class BillsTicketsController extends AppController
     {
         $this->paginate = [
             'contain' => ['BillsStates', 'BillsBranches'],
+            'limit' => 5,
         ];
         $billsTickets = $this->paginate($this->BillsTickets);
 

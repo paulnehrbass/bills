@@ -46,6 +46,9 @@ class Application extends BaseApplication
         // Call parent to load bootstrap from files.
         parent::bootstrap();
 
+        // Hier Plugin laden
+        $this->addPlugin('Skote');
+
         if (PHP_SAPI === 'cli') {
             $this->bootstrapCli();
         } else {

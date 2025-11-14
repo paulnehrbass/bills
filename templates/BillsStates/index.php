@@ -64,7 +64,7 @@
       <thead>
        <tr>
                  <th><?= $this->Paginator->sort('id') ?></th>
-                 <th><?= $this->Paginator->sort('state') ?></th>
+                 <th><?= $this->Paginator->sort('name') ?></th>
                  <th><?= $this->Paginator->sort('created') ?></th>
                  <th><?= $this->Paginator->sort('modified') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
@@ -74,7 +74,7 @@
        <?php foreach ($billsStates as $billsState): ?>
         <tr>
                                                                          <td><?= $this->Number->format($billsState->id) ?></td>
-                                                                                              <td><?= h($billsState->state) ?></td>
+                                                                                              <td><?= h($billsState->name) ?></td>
                                                                                               <td><?= h($billsState->created) ?></td>
                                                                                               <td><?= h($billsState->modified) ?></td>
                                                 <td class="actions">

@@ -38,28 +38,26 @@
                  * @var \App\Model\Entity\BillsState $billsState
                  */
                 ?>
-                    <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-                        <?= $this->Html->link(__('List Bills States'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="billsStates form content">
-            <?= $this->Form->create($billsState) ?>
-            <fieldset>
-                <legend><?= __('Add Bills State') ?></legend>
-                <?php
-                        echo $this->Form->control('state');
-                        echo $this->Form->control('description');
-                ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
-        </div>
+                    
+<div class="row">
+    <div class="card-body">
+        <h4 class="card-title mb-4">Horizontal Form Layout</h4>
+        <?= $this->Form->create($billsState) ?>
+        <fieldset>
+            <legend><?= __('Add Bills State') ?></legend>
+            <?php
+                    echo $this->Form->control('name');
+                    echo $this->Form->control('description');
+            ?>
+        </fieldset>
+        <?= $this->Form->button(__('Submit')) ?>
+        <?= $this->Form->end() ?>
     </div>
 </div>
+
+
+
+
 
 
             </div> <!-- container-fluid -->

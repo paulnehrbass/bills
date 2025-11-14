@@ -24,7 +24,7 @@
                 </tr>
                 <tr>
                     <th><?= __('Bills State') ?></th>
-                    <td><?= $billsTicket->has('bills_state') ? $this->Html->link($billsTicket->bills_state->id, ['controller' => 'BillsStates', 'action' => 'view', $billsTicket->bills_state->id]) : '' ?></td>
+                    <td><?= $billsTicket->has('bills_state') ? $this->Html->link($billsTicket->bills_state->name, ['controller' => 'BillsStates', 'action' => 'view', $billsTicket->bills_state->id]) : '' ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Bills Branch') ?></th>

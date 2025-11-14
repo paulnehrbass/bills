@@ -18,7 +18,7 @@
  * @var \{{ namespace }}\View\AppView $this
  * @var \{{ entityClass }} ${{ singularVar }}
         {{- "\n" }}
-{%- if associations.BelongsTo is defined %}
+{%- if associations.BelongsT o is defined %}
     {%- for assocName, assocData in associations.BelongsTo %}
  * @var string[]|\Cake\Collection\CollectionInterface ${{ assocData.variable }}
         {{- "\n" }}

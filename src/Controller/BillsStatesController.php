@@ -18,7 +18,7 @@ class BillsStatesController extends AppController
      */
     public function index()
     {
-        $billsStates = $this->paginate($this->BillsStates)->toArray();
+        $billsStates = $this->paginate($this->BillsStates);
 
         $this->set(compact('billsStates'));
     }

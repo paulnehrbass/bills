@@ -16,11 +16,11 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="billsStates view content">
-            <h3><?= h($billsState->id) ?></h3>
+            <h3><?= h($billsState->name) ?></h3>
             <table>
                 <tr>
-                    <th><?= __('State') ?></th>
-                    <td><?= h($billsState->state) ?></td>
+                    <th><?= __('Name') ?></th>
+                    <td><?= h($billsState->name) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Id') ?></th>

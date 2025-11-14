@@ -40,7 +40,7 @@ class BillsStatesTable extends Table
         parent::initialize($config);
 
         $this->setTable('bills_states');
-        $this->setDisplayField('id');
+        $this->setDisplayField('name');
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
@@ -55,10 +55,10 @@ class BillsStatesTable extends Table
     public function validationDefault(Validator $validator): Validator
     {
         $validator
-            ->scalar('state')
-            ->maxLength('state', 50)
-            ->requirePresence('state', 'create')
-            ->notEmptyString('state');
+            ->scalar('name')
+            ->maxLength('name', 50)
+            ->requirePresence('name', 'create')
+            ->notEmptyString('name');
 
         $validator
             ->scalar('description')

@@ -9,7 +9,7 @@ use Cake\ORM\Entity;
  * BillsState Entity
  *
  * @property int $id
- * @property string $state
+ * @property string $name
  * @property string $description
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime|null $modified
@@ -26,7 +26,7 @@ class BillsState extends Entity
      * @var array<string, bool>
      */
     protected $_accessible = [
-        'state' => true,
+        'name' => true,
         'description' => true,
         'created' => true,
         'modified' => true,
