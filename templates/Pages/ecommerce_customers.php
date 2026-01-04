@@ -173,21 +173,31 @@
 
         <?= $this->element('vendor-scripts') ?>
         <!-- bootstrap-datepicker js -->
-        <script src="/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<!--        <script src="/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>-->
 
         <!-- Required datatable js -->
-        <script src="/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-        <script src="/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+<!--        <script src="/libs/datatables.net/js/jquery.dataTables.min.js"></script>-->
+<!--        <script src="/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>-->
         
         <!-- Responsive examples -->
-        <script src="/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-        <script src="/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+<!--        <script src="/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>-->
+<!--        <script src="/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>-->
         
         <!-- ecommerce-customer-list init -->
-        <script src="/js/pages/ecommerce-customer-list.init.js"></script>
+<!--        <script src="/js/pages/ecommerce-customer-list.init.js"></script>-->
         
         <!-- App js -->
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
+
+<?= $this->Html->script([
+    '/libs/bootstrap-datepicker/js/bootstrap-datepicker.min',
+    '/libs/datatables.net/js/jquery.dataTables.min',
+    '/libs/datatables.net-bs4/js/dataTables.bootstrap4.min',
+    '/libs/datatables.net-responsive/js/dataTables.responsive.min',
+    '/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min',
+    '/js/pages/ecommerce-customer-list.init',
+    '/js/app',
+]) ?>
 
     </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!-- ========== Left Sidebar Start ========== -->
 <div class="vertical-menu">
 
@@ -15,43 +16,165 @@
                         <span key="t-dashboards">Dashboards</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="home" key="t-default">Default</a></li>
-                        <li><a href="dashboard-saas" key="t-saas">Saas</a></li>
-                        <li><a href="dashboard-crypto" key="t-crypto">Crypto</a></li>
-                        <li><a href="dashboard-blog" key="t-blog">Blog</a></li>
-                        <li><a href="dashboard-job" key="t-jobs">Jobs</a></li>
+                        <li>
+                            <?= $this->Html->link(
+                                'Inbox',
+                                ['controller' => 'Pages', 'action' => 'display', 'home'],
+                                ['key' => 't-default']
+                            ) ?>
+                        </li>
+                        <li>
+                            <?= $this->Html->link(
+                                'Saas',
+                                ['controller' => 'Pages', 'action' => 'display', 'dashboard_saas'],
+                                ['key' => 't-saas']
+                            ) ?>
+                        </li>
+                        <li>
+                            <?= $this->Html->link(
+                                'Crypto',
+                                ['controller' => 'Pages', 'action' => 'display', 'dashboard-crypto'],
+                                ['key' => 't-crypto']
+                            ) ?>
+                        </li>
+                        <li>
+                            <?= $this->Html->link(
+                                'Blog',
+                                ['controller' => 'Pages', 'action' => 'display', 'dashboard-blog'],
+                                ['key' => 't-blog']
+                            ) ?>
+                        </li>
+                        <li>
+                            <?= $this->Html->link(
+                                'Jobs',
+                                ['controller' => 'Pages', 'action' => 'display', 'dashboard-job'],
+                                ['key' => 't-job']
+                            ) ?>
+                        </li>
                     </ul>
                 </li>
 
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
                         <span class="badge rounded-pill bg-danger float-end" key="t-hot">Hot</span>
-                        <i class="bx bx-layout"></i>
+                            <i class="bx bx-layout"></i>
                         <span key="t-layouts">Layouts</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="true">
                         <li>
                             <a href="javascript: void(0);" class="has-arrow" key="t-vertical">Vertical</a>
                             <ul class="sub-menu" aria-expanded="true">
-                                <li><a href="layouts-light-sidebar" key="t-light-sidebar">Light Sidebar</a></li>
-                                <li><a href="layouts-compact-sidebar" key="t-compact-sidebar">Compact Sidebar</a></li>
-                                <li><a href="layouts-icon-sidebar" key="t-icon-sidebar">Icon Sidebar</a></li>
-                                <li><a href="layouts-boxed" key="t-boxed-width">Boxed Width</a></li>
-                                <li><a href="layouts-preloader" key="t-preloader">Preloader</a></li>
-                                <li><a href="layouts-colored-sidebar" key="t-colored-sidebar">Colored Sidebar</a></li>
-                                <li><a href="layouts-scrollable" key="t-scrollable">Scrollable</a></li>
+                                <li>
+<!--                                    <a href="layouts-light-sidebar" key="t-light-sidebar">Light Sidebar</a>-->
+                                    <?= $this->Html->link(
+                                        'Light Sidebar',
+                                        ['controller' => 'Pages', 'action' => 'display', 'layouts-light-sidebar'],
+                                        ['key' => 't-light-sidebar']
+                                    ) ?>
+                                </li>
+
+                                <li>
+<!--                                    <a href="layouts-compact-sidebar" key="t-compact-sidebar">Compact Sidebar</a>-->
+                                    <?= $this->Html->link(
+                                        'Compact Sidebar',
+                                        ['controller' => 'Pages', 'action' => 'display', 'layouts-compact-sidebar'],
+                                        ['key' => 't-compact-sidebar']
+                                    ) ?>
+                                </li>
+                                <li>
+<!--                                    <a href="layouts-icon-sidebar" key="t-icon-sidebar">Icon Sidebar</a>-->
+                                    <?= $this->Html->link(
+                                        'Icon Sidebar',
+                                        ['controller' => 'Pages', 'action' => 'display', 'layouts-icon-sidebar'],
+                                        ['key' => 't-icon-sidebar']
+                                    ) ?>
+                                </li>
+                                <li>
+<!--                                    <a href="layouts-boxed" key="t-boxed-width">Boxed Width</a>-->
+                                    <?= $this->Html->link(
+                                        'Boxed Width',
+                                        ['controller' => 'Pages', 'action' => 'display', 'layouts-boxed'],
+                                        ['key' => 't-boxed-width']
+                                    ) ?>
+                                </li>
+                                <li>
+<!--                                    <a href="layouts-preloader" key="t-preloader">Preloader</a>-->
+                                    <?= $this->Html->link(
+                                        'Preloader',
+                                        ['controller' => 'Pages', 'action' => 'display', 'layouts-preloader'],
+                                        ['key' => 't-preloader']
+                                    ) ?>
+                                </li>
+                                <li>
+                                    <a href="layouts-colored-sidebar" key="t-colored-sidebar">Colored Sidebar</a>
+                                    <?= $this->Html->link(
+                                        'Jobs',
+                                        ['controller' => 'Pages', 'action' => 'display', 'dashboard-job'],
+                                        ['key' => 't-job']
+                                    ) ?>
+                                </li>
+                                <li>
+<!--                                    <a href="layouts-scrollable" key="t-scrollable">Scrollable</a>-->
+                                    <?= $this->Html->link(
+                                        'Scrollable',
+                                        ['controller' => 'Pages', 'action' => 'display', 'layouts-scrollable'],
+                                        ['key' => 't-scrollable']
+                                    ) ?>
+                                </li>
                             </ul>
                         </li>
 
                         <li>
                             <a href="javascript: void(0);" class="has-arrow" key="t-horizontal">Horizontal</a>
                             <ul class="sub-menu" aria-expanded="true">
-                                <li><a href="layouts-horizontal" key="t-horizontal">Horizontal</a></li>
-                                <li><a href="layouts-hori-topbar-light" key="t-topbar-light">Topbar light</a></li>
-                                <li><a href="layouts-hori-boxed-width" key="t-boxed-width">Boxed width</a></li>
-                                <li><a href="layouts-hori-preloader" key="t-preloader">Preloader</a></li>
-                                <li><a href="layouts-hori-colored-header" key="t-colored-topbar">Colored Header</a></li>
-                                <li><a href="layouts-hori-scrollable" key="t-scrollable">Scrollable</a></li>
+                                <li>
+<!--                                    <a href="layouts-horizontal" key="t-horizontal">Horizontal</a>-->
+                                    <?= $this->Html->link(
+                                        'Horizontal',
+                                        ['controller' => 'Pages', 'action' => 'display', 'layouts-horizontal'],
+                                        ['key' => 't-horizontal']
+                                    ) ?>
+                                </li>
+                                <li>
+<!--                                    <a href="layouts-hori-topbar-light" key="t-topbar-light">Topbar light</a>-->
+                                    <?= $this->Html->link(
+                                        'Topbar light',
+                                        ['controller' => 'Pages', 'action' => 'display', 'layouts-hori-topbar-light'],
+                                        ['key' => 't-topbar-light']
+                                    ) ?>
+                                </li>
+                                <li>
+<!--                                    <a href="layouts-hori-boxed-width" key="t-boxed-width">Boxed width</a>-->
+                                    <?= $this->Html->link(
+                                        'Boxed width',
+                                        ['controller' => 'Pages', 'action' => 'display', 'layouts-hori-boxed-width'],
+                                        ['key' => 't-boxed-width']
+                                    ) ?>
+                                </li>
+                                <li>
+<!--                                    <a href="layouts-hori-preloader" key="t-preloader">Preloader</a>-->
+                                    <?= $this->Html->link(
+                                        'Preloader',
+                                        ['controller' => 'Pages', 'action' => 'display', 'layouts-hori-preloader'],
+                                        ['key' => 't-preloader']
+                                    ) ?>
+                                </li>
+                                <li>
+<!--                                    <a href="layouts-hori-colored-header" key="t-colored-topbar">Colored Header</a>-->
+                                    <?= $this->Html->link(
+                                        'Colored Header',
+                                        ['controller' => 'Pages', 'action' => 'display', 'layouts-hori-colored-header'],
+                                        ['key' => 't-colored-topbar']
+                                    ) ?>
+                                </li>
+                                <li>
+<!--                                    <a href="layouts-hori-scrollable" key="t-scrollable">Scrollable</a>-->
+                                    <?= $this->Html->link(
+                                        'Scrollable',
+                                        ['controller' => 'Pages', 'action' => 'display', 'layouts-hori-scrollable'],
+                                        ['key' => 't-scrollable']
+                                    ) ?>
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -59,7 +182,7 @@
 
                 <li class="menu-title" key="t-apps">Apps</li>
 
-                
+
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
@@ -67,23 +190,49 @@
                         <span key="t-dashboards">Calendars</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="calendar" key="t-tui-calendar">TUI Calendar</a></li>
-                        <li><a href="calendar-full" key="t-full-calendar">Full Calendar</a></li>
+                        <li>
+<!--                            <a href="calendar" key="t-tui-calendar">TUI Calendar</a>-->
+                            <?= $this->Html->link(
+                                'TUI Calendar',
+                                ['controller' => 'Pages', 'action' => 'display', 'calendar'],
+                                ['key' => 't-t-tui-calendar']
+                            ) ?>
+                        </li>
+                        <li>
+<!--                            <a href="calendar-full" key="t-full-calendar">Full Calendar</a>-->
+                            <?= $this->Html->link(
+                                'Full Calendar',
+                                ['controller' => 'Pages', 'action' => 'display', 'calendar-full'],
+                                ['key' => 't-full-calendar']
+                            ) ?>
+                        </li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href="chat" class="waves-effect">
-                        <i class="bx bx-chat"></i>
-                        <span key="t-chat">Chat</span>
-                    </a>
+<!--                    <a href="chat" class="waves-effect">-->
+<!--                        <i class="bx bx-chat"></i>-->
+<!--                        <span key="t-chat">Chat</span>-->
+<!--                    </a>-->
+                    <?= $this->Html->link(
+                        '<i class="bx bx-chat"></i><span key="t-chat">Chat</span>',
+                        ['controller' => 'Pages', 'action' => 'display', 'chat'],
+                        ['class' => 'waves-effect', 'escape' => false]
+                    ) ?>
+
                 </li>
 
                 <li>
-                    <a href="apps-filemanager" class="waves-effect">
-                        <i class="bx bx-file"></i>
-                        <span key="t-file-manager">File Manager</span>
-                    </a>
+<!--                    <a href="apps-filemanager" class="waves-effect">-->
+<!--                        <i class="bx bx-file"></i>-->
+<!--                        <span key="t-file-manager">File Manager</span>-->
+<!--                    </a>-->
+                    <?= $this->Html->link(
+                        '<i class="bx bx-file"></i><span key="t-file-manager">File Manager</span>',
+                        ['controller' => 'Pages', 'action' => 'display', 'apps-filemanager'],
+                        ['class' => 'waves-effect', 'escape' => false]
+                    ) ?>
+
                 </li>
 
                 <li>
@@ -92,14 +241,22 @@
                         <span key="t-ecommerce">Ecommerce</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="ecommerce-products" key="t-products">Products</a></li>
-                        <li><a href="ecommerce-product-detail" key="t-product-detail">Product Detail</a></li>
-                        <li><a href="ecommerce-orders" key="t-orders">Orders</a></li>
-                        <li><a href="ecommerce-customers" key="t-customers">Customers</a></li>
-                        <li><a href="ecommerce-cart" key="t-cart">Cart</a></li>
-                        <li><a href="ecommerce-checkout" key="t-checkout">Checkout</a></li>
-                        <li><a href="ecommerce-shops" key="t-shops">Shops</a></li>
-                        <li><a href="ecommerce-add-product" key="t-add-product">Add Product</a></li>
+<!--                        <li><a href="ecommerce-products" key="t-products">Products</a></li>-->
+<!--                        <li><a href="ecommerce-product-detail" key="t-product-detail">Product Detail</a></li>-->
+<!--                        <li><a href="ecommerce-orders" key="t-orders">Orders</a></li>-->
+<!--                        <li><a href="ecommerce-customers" key="t-customers">Customers</a></li>-->
+<!--                        <li><a href="ecommerce-cart" key="t-cart">Cart</a></li>-->
+<!--                        <li><a href="ecommerce-checkout" key="t-checkout">Checkout</a></li>-->
+<!--                        <li><a href="ecommerce-shops" key="t-shops">Shops</a></li>-->
+<!--                        <li><a href="ecommerce-add-product" key="t-add-product">Add Product</a></li>-->
+                        <li><?= $this->Html->link('Products', ['controller' => 'Pages', 'action' => 'display', 'ecommerce-products'], ['key' => 't-products']) ?></li>
+                        <li><?= $this->Html->link('Product Detail', ['controller' => 'Pages', 'action' => 'display', 'ecommerce-product-detail'], ['key' => 't-product-detail']) ?></li>
+                        <li><?= $this->Html->link('Orders', ['controller' => 'Pages', 'action' => 'display', 'ecommerce-orders'], ['key' => 't-orders']) ?></li>
+                        <li><?= $this->Html->link('Customers', ['controller' => 'Pages', 'action' => 'display', 'ecommerce-customers'], ['key' => 't-customers']) ?></li>
+                        <li><?= $this->Html->link('Cart', ['controller' => 'Pages', 'action' => 'display', 'ecommerce-cart'], ['key' => 't-cart']) ?></li>
+                        <li><?= $this->Html->link('Checkout', ['controller' => 'Pages', 'action' => 'display', 'ecommerce-checkout'], ['key' => 't-checkout']) ?></li>
+                        <li><?= $this->Html->link('Shops', ['controller' => 'Pages', 'action' => 'display', 'ecommerce-shops'], ['key' => 't-shops']) ?></li>
+                        <li><?= $this->Html->link('Add Product', ['controller' => 'Pages', 'action' => 'display', 'ecommerce-add-product'], ['key' => 't-add-product']) ?></li>
                     </ul>
                 </li>
 
@@ -109,13 +266,20 @@
                         <span key="t-crypto">Crypto</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="crypto-wallet" key="t-wallet">Wallet</a></li>
-                        <li><a href="crypto-buy-sell" key="t-buy">Buy/Sell</a></li>
-                        <li><a href="crypto-exchange" key="t-exchange">Exchange</a></li>
-                        <li><a href="crypto-lending" key="t-lending">Lending</a></li>
-                        <li><a href="crypto-orders" key="t-orders">Orders</a></li>
-                        <li><a href="crypto-kyc-application" key="t-kyc">KYC Application</a></li>
-                        <li><a href="crypto-ico-landing" key="t-ico">ICO Landing</a></li>
+<!--                        <li><a href="crypto-wallet" key="t-wallet">Wallet</a></li>-->
+<!--                        <li><a href="crypto-buy-sell" key="t-buy">Buy/Sell</a></li>-->
+<!--                        <li><a href="crypto-exchange" key="t-exchange">Exchange</a></li>-->
+<!--                        <li><a href="crypto-lending" key="t-lending">Lending</a></li>-->
+<!--                        <li><a href="crypto-orders" key="t-orders">Orders</a></li>-->
+<!--                        <li><a href="crypto-kyc-application" key="t-kyc">KYC Application</a></li>-->
+<!--                        <li><a href="crypto-ico-landing" key="t-ico">ICO Landing</a></li>-->
+                        <li><?= $this->Html->link('Wallet', ['controller' => 'Pages', 'action' => 'display', 'crypto-wallet'], ['key' => 't-wallet']) ?></li>
+                        <li><?= $this->Html->link('Buy/Sell', ['controller' => 'Pages', 'action' => 'display', 'crypto-buy-sell'], ['key' => 't-buy']) ?></li>
+                        <li><?= $this->Html->link('Exchange', ['controller' => 'Pages', 'action' => 'display', 'crypto-exchange'], ['key' => 't-exchange']) ?></li>
+                        <li><?= $this->Html->link('Lending', ['controller' => 'Pages', 'action' => 'display', 'crypto-lending'], ['key' => 't-lending']) ?></li>
+                        <li><?= $this->Html->link('Orders', ['controller' => 'Pages', 'action' => 'display', 'crypto-orders'], ['key' => 't-orders']) ?></li>
+                        <li><?= $this->Html->link('KYC Application', ['controller' => 'Pages', 'action' => 'display', 'crypto-kyc-application'], ['key' => 't-kyc']) ?></li>
+                        <li><?= $this->Html->link('ICO Landing', ['controller' => 'Pages', 'action' => 'display', 'crypto-ico-landing'], ['key' => 't-ico']) ?></li>
                     </ul>
                 </li>
 
@@ -125,7 +289,15 @@
                         <span key="t-email">Email</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="email-inbox" key="t-inbox">Inbox</a></li>
+                        <li>
+                            <!-- <a href="email-inbox" key="t-inbox">Inbox</a> -->
+                            <?= $this->Html->link(
+                                'Inbox',
+                                ['controller' => 'Pages', 'action' => 'display', 'email-inbox'],
+                                ['key' => 't-inbox']
+                            ) ?>
+
+                        </li>
                         <li><a href="email-read" key="t-read-email">Read Email</a></li>
                         <li>
                             <a href="javascript: void(0);">

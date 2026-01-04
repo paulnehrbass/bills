@@ -688,11 +688,16 @@
         <?= $this->element('vendor-scripts') ?>
 
         <!-- Apexcharts -->
-        <script src="/libs/apexcharts/apexcharts.min.js"></script>
+<!--        <script src="/libs/apexcharts/apexcharts.min.js"></script>-->
 
         <!-- Dashboard init -->
-        <script src="/js/pages/dashboard.init.js"></script>
+<!--        <script src="/js/pages/dashboard.init.js"></script>-->
 
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
+
+        <?= $this->Html->script([
+            '/libs/apexcharts/apexcharts.min',
+            '/js/pages/dashboard.init',
+            '/js/app', ]) ?>
     </body>
 </html>

@@ -106,5 +106,10 @@
 
         <script src="/js/app.js"></script>
 
-    </body>
+        <?= $this->Html->script([
+            '/js/app',
+        ]) ?>
+
+
+</body>
 </html>

@@ -603,7 +603,12 @@
         <?= $this->element('vendor-scripts') ?>
 
         <!-- App js -->
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
 
-    </body>
+        <?= $this->Html->script([
+            '/js/app',
+        ]) ?>
+
+
+</body>
 </html>

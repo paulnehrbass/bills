@@ -192,20 +192,29 @@
 
         <?= $this->element('vendor-scripts') ?>
         <!-- select2 js -->
-        <script src="/libs/select2/js/select2.min.js"></script>
+<!--        <script src="/libs/select2/js/select2.min.js"></script>-->
 
         <!-- Required datatable js -->
-        <script src="/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-        <script src="/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+<!--        <script src="/libs/datatables.net/js/jquery.dataTables.min.js"></script>-->
+<!--        <script src="/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>-->
         
         <!-- Responsive examples -->
-        <script src="/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-        <script src="/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+<!--        <script src="/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>-->
+<!--        <script src="/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>-->
         
         <!-- ecommerce-customer-list init -->
-        <script src="/js/pages/contact-user-list.init.js"></script>
+<!--        <script src="/js/pages/contact-user-list.init.js"></script>-->
         <!-- App js -->
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
 
-    </body>
+        <?= $this->Html->script([
+            '/libs/select2/js/select2.min',
+            '/libs/datatables.net/js/jquery.dataTables.min',
+            '/libs/datatables.net-bs4/js/dataTables.bootstrap4.min',
+            '/libs/datatables.net-responsive/js/dataTables.responsive.min',
+            '/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min',
+            '/js/pages/contact-user-list.init',
+            '/js/app',
+        ]) ?>
+</body>
 </html>

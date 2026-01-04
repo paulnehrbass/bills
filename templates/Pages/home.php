@@ -680,6 +680,7 @@
                 <!-- end modal -->
 
                 <!-- subscribeModal -->
+                <!--
                 <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
@@ -715,6 +716,7 @@
                         </div>
                     </div>
                 </div>
+                -->
                 <!-- end modal -->
 
                 <?= $this->element('footer') ?>

@@ -261,5 +261,10 @@
         <script src="/js/pages/project-create.init.js"></script>
 
         <script src="/js/app.js"></script>
+
+        <?= $this->Html->script([
+            '/js/app',
+        ]) ?>
+
     </body>
 </html>

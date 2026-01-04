@@ -502,12 +502,19 @@
         <?= $this->element('vendor-scripts') ?>
 
         <!-- apexcharts -->
-        <script src="/libs/apexcharts/apexcharts.min.js"></script>
+<!--        <script src="/libs/apexcharts/apexcharts.min.js"></script>-->
 
         <!-- crypto exchange init -->
-        <script src="/js/pages/crypto-exchange.init.js"></script>
+<!--        <script src="/js/pages/crypto-exchange.init.js"></script>-->
         
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
+
+        <?= $this->Html->script([
+            '/libs/apexcharts/apexcharts.min',
+            '/js/pages/crypto-exchange.init',
+            '/js/app',
+        ]) ?>
+
 
     </body>
 </html>

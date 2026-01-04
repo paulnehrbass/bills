@@ -123,7 +123,12 @@
 
         <?= $this->element('vendor-scripts') ?>
 
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
+
+        <?= $this->Html->script([
+            '/js/app',
+        ]) ?>
+
 
     </body>
 </html>

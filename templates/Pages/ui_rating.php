@@ -194,12 +194,19 @@
         <?= $this->element('vendor-scripts') ?>
 
         <!-- Bootstrap rating js -->
-        <script src="/libs/bootstrap-rating/bootstrap-rating.min.js"></script>
+<!--        <script src="/libs/bootstrap-rating/bootstrap-rating.min.js"></script>-->
 
-        <script src="/js/pages/rating-init.js"></script>
+<!--        <script src="/js/pages/rating-init.js"></script>-->
 
         <!-- App js -->
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
+
+        <?= $this->Html->script([
+            '/libs/bootstrap-rating/bootstrap-rating.min',
+            '/js/pages/rating-init',
+            '/js/app',
+        ]) ?>
+
 
     </body>
 </html>

@@ -77,13 +77,20 @@
         <?= $this->element('vendor-scripts') ?>
 
         <!-- Session timeout js -->
-        <script src="/libs/@curiosityx/bootstrap-session-timeout/index.js"></script>
+<!--        <script src="/libs/@curiosityx/bootstrap-session-timeout/index.js"></script>-->
 
         <!-- Session timeout js -->
-        <script src="/js/pages/session-timeout.init.js"></script>
+<!--        <script src="/js/pages/session-timeout.init.js"></script>-->
 
         <!-- App js -->
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
+
+        <?= $this->Html->script([
+            '/libs/@curiosityx/bootstrap-session-timeout/index',
+            '/js/pages/session-timeout.init',
+            '/js/app',
+        ]) ?>
+
 
     </body>
 </html>

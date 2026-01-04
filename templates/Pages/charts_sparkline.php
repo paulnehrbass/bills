@@ -119,12 +119,18 @@
 
         <?= $this->element('vendor-scripts') ?>
 
-        <script src="/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
+<!--        <script src="/libs/jquery-sparkline/jquery.sparkline.min.js"></script>-->
         
-        <script src="/js/pages/sparklines.init.js"></script>
+<!--        <script src="/js/pages/sparklines.init.js"></script>-->
 
         <!-- App js -->
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
+
+        <?= $this->Html->script([
+            '/libs/jquery-sparkline/jquery.sparkline.min',
+            '/js/pages/sparklines.init',
+            '/js/app',
+        ]) ?>
 
     </body>
 </html>

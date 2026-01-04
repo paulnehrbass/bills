@@ -207,16 +207,23 @@
         <?= $this->element('vendor-scripts') ?>
 
         <!-- tui charts plugins -->
-        <script src="/libs/tui-chart/tui-chart-all.min.js"></script>
+<!--        <script src="/libs/tui-chart/tui-chart-all.min.js"></script>-->
 
         <!-- tui charts map -->
-        <script src="/libs/tui-chart/maps/usa.js"></script>
+<!--        <script src="/libs/tui-chart/maps/usa.js"></script>-->
 
         <!-- tui charts plugins -->
-        <script src="/js/pages/tui-charts.init.js"></script>
+<!--        <script src="/js/pages/tui-charts.init.js"></script>-->
 
         <!-- App js -->
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
+
+        <?= $this->Html->script([
+            '/libs/tui-chart/tui-chart-all.min',
+            '/libs/tui-chart/maps/usa',
+            '/js/pages/tui-charts.init',
+            '/js/app',
+        ]) ?>
 
     </body>
 </html>

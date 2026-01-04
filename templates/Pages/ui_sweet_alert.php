@@ -130,13 +130,20 @@
         <?= $this->element('vendor-scripts') ?>
 
         <!-- Sweet Alerts js -->
-        <script src="/libs/sweetalert2/sweetalert2.min.js"></script>
+<!--        <script src="/libs/sweetalert2/sweetalert2.min.js"></script>-->
 
         <!-- Sweet alert init js-->
-        <script src="/js/pages/sweet-alerts.init.js"></script>
+<!--        <script src="/js/pages/sweet-alerts.init.js"></script>-->
 
         <!-- App js -->
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
 
-    </body>
+        <?= $this->Html->script([
+            '/libs/sweetalert2/sweetalert2.min',
+            '/js/pages/sweet-alerts.init',
+            '/js/app',
+        ]) ?>
+
+
+</body>
 </html>

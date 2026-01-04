@@ -75,5 +75,10 @@
 
         <script src="/js/app.js"></script>
 
+        <?= $this->Html->script([
+            '/js/app',
+        ]) ?>
+
+
     </body>
 </html>

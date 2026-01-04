@@ -505,13 +505,19 @@
 
         <?= $this->element('vendor-scripts') ?>
 
-        <script src="/libs/select2/js/select2.min.js"></script>
+<!--        <script src="/libs/select2/js/select2.min.js"></script>-->
 
         <!-- init js -->
-        <script src="/js/pages/ecommerce-checkout.init.js"></script>
+<!--        <script src="/js/pages/ecommerce-checkout.init.js"></script>-->
 
         <!-- App js -->
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
+
+        <?= $this->Html->script([
+            '/libs/select2/js/select2.min',
+            '/js/pages/ecommerce-checkout.init',
+            '/js/app',
+        ]) ?>
         
     </body>
 </html>

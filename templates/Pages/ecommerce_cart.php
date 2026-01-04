@@ -322,9 +322,16 @@
         <?= $this->element('vendor-scripts') ?>
 
         <!-- Bootrstrap touchspin -->
-        <script src="/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
-        <script src="/js/pages/ecommerce-cart.init.js"></script>
+<!--        <script src="/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>-->
+<!--        <script src="/js/pages/ecommerce-cart.init.js"></script>-->
 
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
+
+        <?= $this->Html->script([
+            '/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min',
+            '/js/pages/ecommerce-cart.init',
+            '/js/app',
+        ]) ?>
+
     </body>
 </html>

@@ -161,21 +161,35 @@
         <?= $this->element('vendor-scripts') ?>
 
         <!-- flot plugins -->
-        <script src="/libs/flot-charts/jquery.flot.js"></script>
-        <script src="/libs/flot-charts/jquery.flot.time.js"></script>
-        <script src="/libs/jquery.flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-        <script src="/libs/flot-charts/jquery.flot.resize.js"></script>
-        <script src="/libs/flot-charts/jquery.flot.pie.js"></script>
-        <script src="/libs/flot-charts/jquery.flot.selection.js"></script>
-        <script src="/libs/flot-charts/jquery.flot.stack.js"></script>
-        <script src="/libs/flot.curvedLines/curvedLines.js"></script>
-        <script src="/libs/flot-charts/jquery.flot.crosshair.js"></script>
+<!--        <script src="/libs/flot-charts/jquery.flot.js"></script>-->
+<!--        <script src="/libs/flot-charts/jquery.flot.time.js"></script>-->
+<!--        <script src="/libs/jquery.flot.tooltip/js/jquery.flot.tooltip.min.js"></script>-->
+<!--        <script src="/libs/flot-charts/jquery.flot.resize.js"></script>-->
+<!--        <script src="/libs/flot-charts/jquery.flot.pie.js"></script>-->
+<!--        <script src="/libs/flot-charts/jquery.flot.selection.js"></script>-->
+<!--        <script src="/libs/flot-charts/jquery.flot.stack.js"></script>-->
+<!--        <script src="/libs/flot.curvedLines/curvedLines.js"></script>-->
+<!--        <script src="/libs/flot-charts/jquery.flot.crosshair.js"></script>-->
 
         <!-- flot init -->
         <script src="/js/pages/flot.init.js"></script>   
 
         <!-- App js -->
         <script src="/js/app.js"></script>
+
+        <?= $this->Html->script([
+            '/libs/flot-charts/jquery.flot',
+            '/libs/flot-charts/jquery.flot.time',
+            '/libs/jquery.flot.tooltip/js/jquery.flot.tooltip.min',
+            '/libs/flot-charts/jquery.flot.resize',
+            '/libs/flot-charts/jquery.flot.pie',
+            '/libs/flot-charts/jquery.flot.selection',
+            '/libs/flot-charts/jquery.flot.stack',
+            '/libs/flot.curvedLines/curvedLines',
+            '/libs/flot-charts/jquery.flot.crosshair',
+            '/js/app',
+        ]) ?>
+
 
     </body>
 </html>

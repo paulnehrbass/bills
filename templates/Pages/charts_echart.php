@@ -122,11 +122,18 @@
         <?= $this->element('vendor-scripts') ?>
 
         <!-- echarts js -->
-        <script src="/libs/echarts/echarts.min.js"></script>
+<!--        <script src="/libs/echarts/echarts.min.js"></script>-->
         <!-- echarts init -->
-        <script src="/js/pages/echarts.init.js"></script>
+<!--        <script src="/js/pages/echarts.init.js"></script>-->
         
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
 
-    </body>
+        <?= $this->Html->script([
+            '/libs/echarts/echarts.min',
+            '/js/pages/echarts.init',
+            '/js/app',
+        ]) ?>
+
+
+</body>
 </html>

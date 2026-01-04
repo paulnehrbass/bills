@@ -333,12 +333,18 @@
         <?= $this->element('vendor-scripts') ?>
 
         <!-- apexcharts -->
-        <script src="/libs/apexcharts/apexcharts.min.js"></script>
+<!--        <script src="/libs/apexcharts/apexcharts.min.js"></script>-->
 
-        <script src="/js/pages/profile.init.js"></script>
+<!--        <script src="/js/pages/profile.init.js"></script>-->
         
         <!-- App js -->
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
+
+        <?= $this->Html->script([
+            '/libs/apexcharts/apexcharts.min',
+            '/js/pages/profile.init',
+            '/js/app',
+        ]) ?>
 
     </body>
 </html>

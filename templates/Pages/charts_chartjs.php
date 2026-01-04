@@ -209,11 +209,17 @@
         <?= $this->element('vendor-scripts') ?>
 
         <!-- Chart JS -->
-        <script src="/libs/chart.js/chart.umd.js"></script>
-        <script src="/js/pages/chartjs.init.js"></script> 
+<!--        <script src="/libs/chart.js/chart.umd.js"></script>-->
+<!--        <script src="/js/pages/chartjs.init.js"></script> -->
 
         <!-- App js -->
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
+
+        <?= $this->Html->script([
+            '/libs/chart.js/chart.umd',
+            '/js/pages/chartjs.init',
+            '/js/app',
+        ]) ?>
 
     </body>
 </html>

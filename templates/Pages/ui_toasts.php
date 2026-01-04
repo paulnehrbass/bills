@@ -276,9 +276,15 @@
         <?= $this->element('vendor-scripts') ?>
 
         <!-- Bootstrap Toasts Js -->
-        <script src="/js/pages/bootstrap-toastr.init.js"></script>
+<!--        <script src="/js/pages/bootstrap-toastr.init.js"></script>-->
 
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
+
+        <?= $this->Html->script([
+            '/js/pages/bootstrap-toastr.init',
+            '/js/app',
+        ]) ?>
+
 
     </body>
 </html>

@@ -1120,18 +1120,27 @@
 
         <?= $this->element('vendor-scripts') ?>
 
-        <script src="/libs/jquery.easing/jquery.easing.min.js"></script>
+<!--        <script src="/libs/jquery.easing/jquery.easing.min.js"></script>-->
 
         <!-- Plugins js-->
-        <script src="/libs/jquery-countdown/jquery.countdown.min.js"></script>
+<!--        <script src="/libs/jquery-countdown/jquery.countdown.min.js"></script>-->
 
         <!-- owl.carousel js -->
-        <script src="/libs/owl.carousel/owl.carousel.min.js"></script>
+<!--        <script src="/libs/owl.carousel/owl.carousel.min.js"></script>-->
 
         <!-- ICO landing init -->
-        <script src="/js/pages/ico-landing.init.js"></script>
+<!--        <script src="/js/pages/ico-landing.init.js"></script>-->
 
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
+
+        <?= $this->Html->script([
+                '/libs/jquery.easing/jquery.easing.min',
+                '/libs/jquery-countdown/jquery.countdown.min',
+                '/libs/owl.carousel/owl.carousel.min',
+                '/js/pages/ico-landing.init',
+                '/js/app',
+        ]) ?>
+
 
     </body>
 </html>

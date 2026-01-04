@@ -113,12 +113,18 @@
 
         <?= $this->element('vendor-scripts') ?>
 
-        <script src="/libs/jquery-knob/jquery.knob.min.js"></script> 
+<!--        <script src="/libs/jquery-knob/jquery.knob.min.js"></script> -->
 
-        <script src="/js/pages/jquery-knob.init.js"></script> 
+<!--        <script src="/js/pages/jquery-knob.init.js"></script> -->
 
         <!-- App js -->
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
+
+        <?= $this->Html->script([
+            '/libs/jquery-knob/jquery.knob.min',
+            '/js/pages/jquery-knob.init',
+            '/js/app',
+        ]) ?>
 
     </body>
 </html>

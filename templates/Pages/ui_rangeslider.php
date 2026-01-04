@@ -152,13 +152,20 @@
         <?= $this->element('vendor-scripts') ?>
         
         <!-- Ion Range Slider-->
-        <script src="/libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+<!--        <script src="/libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>-->
 
         <!-- Range slider init js-->
-        <script src="/js/pages/range-sliders.init.js"></script>
+<!--        <script src="/js/pages/range-sliders.init.js"></script>-->
 
         <!-- App js -->
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
+
+        <?= $this->Html->script([
+            '/libs/ion-rangeslider/js/ion.rangeSlider.min',
+            '/js/pages/range-sliders.init',
+            '/js/app',
+        ]) ?>
+
 
     </body>
 </html>

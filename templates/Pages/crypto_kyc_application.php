@@ -239,15 +239,22 @@
         <?= $this->element('vendor-scripts') ?>
 
         <!-- jquery step -->
-        <script src="/libs/jquery-steps/build/jquery.steps.min.js"></script>
+<!--        <script src="/libs/jquery-steps/build/jquery.steps.min.js"></script>-->
 
         <!-- Plugins js -->
-        <script src="/libs/dropzone/dropzone-min.js"></script>
+<!--        <script src="/libs/dropzone/dropzone-min.js"></script>-->
 
         <!-- init js -->
-        <script src="/js/pages/crypto-kyc-app.init.js"></script>
+<!--        <script src="/js/pages/crypto-kyc-app.init.js"></script>-->
 
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
+
+        <?= $this->Html->script([
+            '/libs/jquery-steps/build/jquery.steps.min',
+            '/libs/dropzone/dropzone-min',
+            '/js/pages/crypto-kyc-app.init',
+            '/js/app',
+        ]) ?>
 
     </body>
 </html>

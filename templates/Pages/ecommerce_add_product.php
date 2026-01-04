@@ -197,16 +197,22 @@
         <?= $this->element('vendor-scripts') ?>
 
         <!-- select 2 plugin -->
-        <script src="/libs/select2/js/select2.min.js"></script>
+<!--        <script src="/libs/select2/js/select2.min.js"></script>-->
 
         <!-- Plugins js -->
         <script src="/libs/dropzone/dropzone-min.js"></script>
 
         <!-- init js -->
-        <script src="/js/pages/ecommerce-select2.init.js"></script>
+<!--        <script src="/js/pages/ecommerce-select2.init.js"></script>-->
 
         <!-- App js -->
-        <script src="/js/app.js"></script>
+<!--        <script src="/js/app.js"></script>-->
+
+        <?= $this->Html->script([
+            '/libs/select2/js/select2.min',
+            '/js/pages/ecommerce-select2.init',
+            '/js/app',
+        ]) ?>
 
     </body>
 </html>
