@@ -5,7 +5,7 @@
 /logs/*
 /tmp/*
 /vendor/*
-/csv-import/config.config.js
+/csv-import/config/config.js
 
 # OS generated files #
 ######################
