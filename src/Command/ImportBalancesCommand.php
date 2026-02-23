@@ -35,8 +35,7 @@ class ImportBalancesCommand extends Command
         }
 
         $balancesTable = $this->fetchTable('BankingBalances');
-
-        $validRecords = [];
+        $importedCount = 0;
 
         foreach ($parsedResult->getRecords() as $row) {
             $iban = trim($row['iban'] ?? '');
@@ -45,20 +44,24 @@ class ImportBalancesCommand extends Command
                 continue;
             }
 
-            $validRecords[] = $row;
+            // Hash korrekt zur Spalte row_hash
+            $row['row_hash'] = md5(
+                $row['iban'] . '|' .
+                $row['art'] . '|' .
+                $row['bezeichnung'] . '|' .
+                $row['typ'] . '|' .
+                $row['saldo']
+            );
+
+            $entity = $balancesTable->newEntity($row);
+
+            if ($balancesTable->save($entity)) {
+                $importedCount++;
+            } else {
+                $io->err("Fehler beim Speichern der Zeile: " . json_encode($row));
+            }
         }
 
-        if (empty($validRecords)) {
-            $io->out("Keine gültigen Datensätze zum Import gefunden.");
-            return;
-        }
-
-        $entities = $balancesTable->newEntities($validRecords);
-
-        if ($balancesTable->saveMany($entities)) {
-            $io->out("Alle gültigen Datensätze erfolgreich importiert: " . count($entities));
-        } else {
-            $io->err("Fehler beim Speichern der Datensätze.");
-        }
+        $io->out("Alle gültigen Datensätze erfolgreich importiert: $importedCount");
     }
 }

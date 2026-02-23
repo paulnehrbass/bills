@@ -29,7 +29,6 @@ class BalancesParser extends AbstractParser
             throw new RuntimeException("Datei konnte nicht gelesen werden: {$input}");
         }
 
-        // UTF-8 BOM entfernen
         if (substr($data, 0, 3) === "\xEF\xBB\xBF") {
             $data = substr($data, 3);
         }
@@ -49,9 +48,7 @@ class BalancesParser extends AbstractParser
 
         foreach (array_keys($this->headerMap) as $requiredColumn) {
             if (!in_array($requiredColumn, $header, true)) {
-                throw new RuntimeException(
-                    "Fehlende Spalte in CSV: {$requiredColumn}"
-                );
+                throw new RuntimeException("Fehlende Spalte in CSV: {$requiredColumn}");
             }
         }
     }
@@ -92,8 +89,6 @@ class BalancesParser extends AbstractParser
             }
 
             $record['iban'] = preg_replace('/[^A-Z0-9]/i', '', (string)$record['iban']);
-
-            // Diese Version behält kleine Beträge wie 7.27 korrekt
             $record['saldo'] = $this->parseAmount((string)$record['saldo']);
 
             if ($record['saldo'] < 0.0) continue;
@@ -107,30 +102,44 @@ class BalancesParser extends AbstractParser
     private function getLines(string $rawData): array
     {
         return array_values(
-            array_filter(
-                array_map('trim', preg_split('/\R/', $rawData))
-            )
+            array_filter(array_map('trim', preg_split('/\R/', $rawData)))
         );
     }
 
     private function parseAmount(string $value): float
     {
-        // 1️⃣ Excel/CSV Anführungen und führendes = entfernen
         $value = preg_replace('/^="?(.+?)"?$/', '$1', $value);
         $value = trim($value);
 
-        // 2️⃣ Prüfen, ob Komma als Dezimaltrennzeichen vorhanden
         if (substr_count($value, ',') === 1) {
-            // Komma ist Dezimalpunkt → alle Tausender entfernen: ' und ’
             $value = str_replace(["'", '’'], '', $value);
-            // Komma → Punkt
             $value = str_replace(',', '.', $value);
         } else {
-            // Kein Komma → Punkt bleibt Dezimalpunkt, nur Tausender entfernen
             $value = str_replace(["'", '’'], '', $value);
         }
 
-        // 3️⃣ Ergebnis als float
         return (float)$value;
+    }
+
+    public function parseRow(array $rowData): array
+    {
+        $parsed = [
+            'iban' => $rowData['iban'],
+            'art' => $rowData['art'],
+            'bezeichnung' => $rowData['bezeichnung'],
+            'typ' => $rowData['typ'],
+            'saldo' => $rowData['saldo'],
+        ];
+
+        // row_hash direkt hier berechnen, passt zur DB-Spalte
+        $parsed['row_hash'] = md5(
+            $parsed['iban'] . '|' .
+            $parsed['art'] . '|' .
+            $parsed['bezeichnung'] . '|' .
+            $parsed['typ'] . '|' .
+            $parsed['saldo']
+        );
+
+        return $parsed;
     }
 }

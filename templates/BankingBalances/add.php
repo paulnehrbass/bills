@@ -46,6 +46,7 @@
         <fieldset>
             <legend><?= __('Add Banking Balance') ?></legend>
             <?php
+                    echo $this->Form->control('row_hash');
                     echo $this->Form->control('iban');
                     echo $this->Form->control('art');
                     echo $this->Form->control('bezeichnung');

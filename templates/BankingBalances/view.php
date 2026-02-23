@@ -16,8 +16,12 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="bankingBalances view content">
-            <h3><?= h($bankingBalance->id) ?></h3>
+            <h3><?= h($bankingBalance->bezeichnung) ?></h3>
             <table>
+                <tr>
+                    <th><?= __('Row Hash') ?></th>
+                    <td><?= h($bankingBalance->row_hash) ?></td>
+                </tr>
                 <tr>
                     <th><?= __('Iban') ?></th>
                     <td><?= h($bankingBalance->iban) ?></td>

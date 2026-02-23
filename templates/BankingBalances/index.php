@@ -64,6 +64,7 @@
       <thead>
        <tr>
                  <th><?= $this->Paginator->sort('id') ?></th>
+                 <th><?= $this->Paginator->sort('row_hash') ?></th>
                  <th><?= $this->Paginator->sort('iban') ?></th>
                  <th><?= $this->Paginator->sort('art') ?></th>
                  <th><?= $this->Paginator->sort('typ') ?></th>
@@ -77,6 +78,7 @@
        <?php foreach ($bankingBalances as $bankingBalance): ?>
         <tr>
                                                                          <td><?= $this->Number->format($bankingBalance->id) ?></td>
+                                                                                              <td><?= h($bankingBalance->row_hash) ?></td>
                                                                                               <td><?= h($bankingBalance->iban) ?></td>
                                                                                               <td><?= h($bankingBalance->art) ?></td>
                                                                                               <td><?= h($bankingBalance->typ) ?></td>
