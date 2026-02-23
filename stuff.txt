@@ -1,0 +1,7 @@
+cake import_balances -s "F:\_dev\xampp\htdocs\bills\webroot\imports"
+
+
+bin/cake import_balances -s /pfad/zu/datei.csv
+bin/cake import_balances -s /pfad/zu/ordner
+
+cake import_balances -h
