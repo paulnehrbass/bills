@@ -96,7 +96,7 @@ class BalancesParser extends AbstractParser
             // Diese Version behält kleine Beträge wie 7.27 korrekt
             $record['saldo'] = $this->parseAmount((string)$record['saldo']);
 
-            if ($record['saldo'] <= 0.0) continue;
+            if ($record['saldo'] < 0.0) continue;
 
             $records[] = $record;
         }
@@ -115,16 +115,22 @@ class BalancesParser extends AbstractParser
 
     private function parseAmount(string $value): float
     {
-        // Excel-Anführungen und führendes = entfernen
+        // 1️⃣ Excel/CSV Anführungen und führendes = entfernen
         $value = preg_replace('/^="?(.+?)"?$/', '$1', $value);
         $value = trim($value);
 
-        // Punkt bleibt Dezimal, nur Tausender entfernen
-        $value = str_replace(["'", '’', ' '], '', $value);
+        // 2️⃣ Prüfen, ob Komma als Dezimaltrennzeichen vorhanden
+        if (substr_count($value, ',') === 1) {
+            // Komma ist Dezimalpunkt → alle Tausender entfernen: ' und ’
+            $value = str_replace(["'", '’'], '', $value);
+            // Komma → Punkt
+            $value = str_replace(',', '.', $value);
+        } else {
+            // Kein Komma → Punkt bleibt Dezimalpunkt, nur Tausender entfernen
+            $value = str_replace(["'", '’'], '', $value);
+        }
 
-        // Komma als Dezimalpunkt
-        $value = str_replace(',', '.', $value);
-
+        // 3️⃣ Ergebnis als float
         return (float)$value;
     }
 }
