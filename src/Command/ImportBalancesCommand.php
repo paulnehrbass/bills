@@ -8,6 +8,8 @@ use Cake\Command\Command;
 use Cake\Console\Arguments;
 use Cake\Console\ConsoleIo;
 use Cake\Console\ConsoleOptionParser;
+use Cake\ORM\Exception\PersistenceFailedException;
+use PDOException;
 
 class ImportBalancesCommand extends Command
 {
@@ -15,9 +17,10 @@ class ImportBalancesCommand extends Command
     {
         $parser->addOption('file', [
             'short' => 'f',
-            'help' => 'Pfad zur CSV-Datei',
             'required' => true,
+            'help' => 'Pfad zur CSV-Datei',
         ]);
+
         return $parser;
     }
 
@@ -27,24 +30,20 @@ class ImportBalancesCommand extends Command
         $io->out("Parsing CSV: $file");
 
         $parser = new BalancesParser();
-        try {
-            $parsedResult = $parser->parse($file);
-        } catch (\RuntimeException $e) {
-            $io->err("Fehler beim Parsen: " . $e->getMessage());
-            return;
-        }
+        $result = $parser->parse($file);
 
-        $balancesTable = $this->fetchTable('BankingBalances');
+        $table = $this->fetchTable('BankingBalances');
+
         $importedCount = 0;
+        $skippedCount = 0;
+        $failedRows = [];
 
-        foreach ($parsedResult->getRecords() as $row) {
-            $iban = trim($row['iban'] ?? '');
-            if (empty($iban)) {
-                $io->out("Zeile ohne IBAN übersprungen.");
+        foreach ($result->getRecords() as $rowNumber => $row) {
+            if (empty($row['iban'])) {
+                $io->out("Zeile {$rowNumber}: leer oder ohne IBAN → übersprungen");
                 continue;
             }
 
-            // Hash korrekt zur Spalte row_hash
             $row['row_hash'] = md5(
                 $row['iban'] . '|' .
                 $row['art'] . '|' .
@@ -53,15 +52,33 @@ class ImportBalancesCommand extends Command
                 $row['saldo']
             );
 
-            $entity = $balancesTable->newEntity($row);
+            $entity = $table->newEntity($row);
 
-            if ($balancesTable->save($entity)) {
+            try {
+                $table->saveOrFail($entity);
                 $importedCount++;
-            } else {
-                $io->err("Fehler beim Speichern der Zeile: " . json_encode($row));
+                $io->out("Zeile {$rowNumber}: gespeichert (row_hash={$row['row_hash']})");
+            } catch (PersistenceFailedException | PDOException $e) {
+                // Duplikat oder anderer DB-Fehler → überspringen
+                $skippedCount++;
+                $failedRows[] = [
+                    'rowNumber' => $rowNumber,
+                    'row_hash' => $row['row_hash'],
+                    'reason' => 'Duplikat oder DB-Fehler'
+                ];
+                $io->out("Zeile {$rowNumber}: übersprungen (row_hash={$row['row_hash']})");
             }
         }
 
-        $io->out("Alle gültigen Datensätze erfolgreich importiert: $importedCount");
+        $io->out("Import abgeschlossen: $importedCount Zeilen gespeichert, $skippedCount übersprungen");
+
+        if (!empty($failedRows)) {
+            $io->out("Details zu übersprungenen Zeilen:");
+            foreach ($failedRows as $fail) {
+                $io->out(
+                    "  Zeile {$fail['rowNumber']}: row_hash={$fail['row_hash']} | Grund: {$fail['reason']}"
+                );
+            }
+        }
     }
 }
