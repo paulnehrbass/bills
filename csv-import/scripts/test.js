@@ -1,11 +1,15 @@
-const { chromium } = require('playwright');
-const config = require('../config/config');
-
+const Login = require('./Login');
+const TestFlow = require('./TestFlow');
+const appConfig = require('../config/config');
 
 (async () => {
-  const browser = await chromium.launch({ headless: false });
-  const page = await browser.newPage();
-  await page.goto(config.playwright.testUrl);
-  await page.waitForTimeout(3000);
-  await browser.close();
+  const login = new Login(appConfig);
+  const flow = new TestFlow(login);
+
+  console.log('--- Starte Flow ---');
+  await flow.run();
+  console.log('Flow abgeschlossen.');
+
+  // Browser offen lassen oder schließen
+  // await login.close();
 })();
