@@ -39,7 +39,6 @@ class BalancesParser extends AbstractParser
     protected function validate(string $rawData): void
     {
         $lines = $this->getLines($rawData);
-
         if (count($lines) < $this->headerLine) {
             throw new RuntimeException('CSV enthält zu wenige Zeilen.');
         }
@@ -56,7 +55,6 @@ class BalancesParser extends AbstractParser
     protected function parseData(string $rawData): array
     {
         $lines = $this->getLines($rawData);
-
         $headerRaw = str_getcsv($lines[$this->headerLine - 1], ';');
         $header = array_map(
             fn(string $col) => $this->headerMap[trim($col)] ?? strtolower(trim($col)),
@@ -80,17 +78,14 @@ class BalancesParser extends AbstractParser
                 $record['art'] = $currentArt;
             }
 
-            if (
-                empty($record['iban']) ||
+            if (empty($record['iban']) ||
                 stripos((string)$record['art'], 'Total') === 0 ||
-                stripos((string)$record['art'], 'Disclaimer') === 0
-            ) {
+                stripos((string)$record['art'], 'Disclaimer') === 0) {
                 continue;
             }
 
             $record['iban'] = preg_replace('/[^A-Z0-9]/i', '', (string)$record['iban']);
             $record['saldo'] = $this->parseAmount((string)$record['saldo']);
-
             if ($record['saldo'] < 0.0) continue;
 
             $records[] = $record;
@@ -101,9 +96,7 @@ class BalancesParser extends AbstractParser
 
     private function getLines(string $rawData): array
     {
-        return array_values(
-            array_filter(array_map('trim', preg_split('/\R/', $rawData)))
-        );
+        return array_values(array_filter(array_map('trim', preg_split('/\R/', $rawData))));
     }
 
     private function parseAmount(string $value): float
@@ -119,27 +112,5 @@ class BalancesParser extends AbstractParser
         }
 
         return (float)$value;
-    }
-
-    public function parseRow(array $rowData): array
-    {
-        $parsed = [
-            'iban' => $rowData['iban'],
-            'art' => $rowData['art'],
-            'bezeichnung' => $rowData['bezeichnung'],
-            'typ' => $rowData['typ'],
-            'saldo' => $rowData['saldo'],
-        ];
-
-        // row_hash direkt hier berechnen, passt zur DB-Spalte
-        $parsed['row_hash'] = md5(
-            $parsed['iban'] . '|' .
-            $parsed['art'] . '|' .
-            $parsed['bezeichnung'] . '|' .
-            $parsed['typ'] . '|' .
-            $parsed['saldo']
-        );
-
-        return $parsed;
     }
 }

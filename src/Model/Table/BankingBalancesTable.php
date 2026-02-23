@@ -11,7 +11,6 @@ class BankingBalancesTable extends Table
     public function initialize(array $config): void
     {
         parent::initialize($config);
-
         $this->setTable('banking_balances');
         $this->setPrimaryKey('id');
     }
