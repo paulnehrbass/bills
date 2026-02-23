@@ -15,83 +15,98 @@ class ImportBalancesCommand extends Command
 {
     public function buildOptionParser(ConsoleOptionParser $parser): ConsoleOptionParser
     {
-        $parser->addOption('file', [
-            'short' => 'f',
+        $parser->addOption('source', [
+            'short' => 's',
             'required' => true,
-            'help' => 'Pfad zur CSV-Datei',
+            'help' => 'Pfad zu einer CSV-Datei oder zu einem Ordner mit CSV-Dateien',
         ]);
         return $parser;
     }
 
     public function execute(Arguments $args, ConsoleIo $io)
     {
-        $file = $args->getOption('file');
-        $io->out("Parsing CSV: $file");
-
+        $source = $args->getOption('source');
         $parser = new BalancesParser();
-        $result = $parser->parse($file);
-
         $table = $this->fetchTable('BankingBalances');
 
-        $importedCount = 0;
-        $skippedCount = 0;
-        $failedRows = [];
+        $files = [];
 
-        foreach ($result->getRecords() as $rowNumber => $row) {
-            if (empty($row['iban'])) {
-                $io->out("Zeile {$rowNumber}: leer oder ohne IBAN → übersprungen");
+        if (is_file($source)) {
+            $files[] = $source;
+        } elseif (is_dir($source)) {
+            $files = glob(rtrim($source, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . '*.csv');
+            if (empty($files)) {
+                $io->out("Keine CSV-Dateien im Ordner gefunden: $source");
+                return;
+            }
+        } else {
+            $io->err("Pfad existiert nicht: $source");
+            return;
+        }
+
+        foreach ($files as $file) {
+            $io->out("Parsing CSV: $file");
+            try {
+                $result = $parser->parse($file);
+            } catch (\RuntimeException $e) {
+                $io->err("Fehler beim Parsen: " . $e->getMessage());
                 continue;
             }
 
-            // Hash inkl. Tagesdatum VOR dem Speichern berechnen
-            $createdDate = (new \DateTime())->format('Y-m-d'); // nur Datum
-            $row['row_hash'] = md5(
-                $row['iban'] . '|' .
-                $row['art'] . '|' .
-                $row['bezeichnung'] . '|' .
-                $row['typ'] . '|' .
-                number_format((float)$row['saldo'], 2, '.', '') . '|' .
-                $createdDate
-            );
+            $importedCount = 0;
+            $skippedCount = 0;
+            $failedRows = [];
 
-            $entity = $table->newEntity($row);
+            foreach ($result->getRecords() as $rowNumber => $row) {
+                if (empty($row['iban'])) continue;
 
-            try {
-                if ($table->exists(['row_hash' => $row['row_hash']])) {
+                // Hash inkl. Tagesdatum vor dem Speichern
+                $createdDate = (new \DateTime())->format('Y-m-d');
+                $row['row_hash'] = md5(
+                    $row['iban'] . '|' .
+                    $row['art'] . '|' .
+                    $row['bezeichnung'] . '|' .
+                    $row['typ'] . '|' .
+                    number_format((float)$row['saldo'], 2, '.', '') . '|' .
+                    $createdDate
+                );
+
+                $entity = $table->newEntity($row);
+
+                try {
+                    if ($table->exists(['row_hash' => $row['row_hash']])) {
+                        $skippedCount++;
+                        $failedRows[] = [
+                            'rowNumber' => $rowNumber,
+                            'row_hash' => $row['row_hash'],
+                            'reason' => 'Duplikat für diesen Tag'
+                        ];
+                        continue;
+                    }
+
+                    $table->saveOrFail($entity);
+                    $importedCount++;
+
+                } catch (PersistenceFailedException | PDOException $e) {
                     $skippedCount++;
                     $failedRows[] = [
                         'rowNumber' => $rowNumber,
-                        'row_hash' => $row['row_hash'],
-                        'reason' => 'Duplikat für diesen Tag'
+                        'row_hash' => $row['row_hash'] ?? null,
+                        'reason' => 'DB-Fehler beim Speichern'
                     ];
-                    $io->out("Zeile {$rowNumber}: übersprungen (row_hash={$row['row_hash']})");
-                    continue;
                 }
-
-                $table->saveOrFail($entity);
-                $importedCount++;
-                $io->out("Zeile {$rowNumber}: gespeichert (row_hash={$row['row_hash']})");
-
-            } catch (PersistenceFailedException | PDOException $e) {
-                $skippedCount++;
-                $failedRows[] = [
-                    'rowNumber' => $rowNumber,
-                    'row_hash' => $row['row_hash'] ?? null,
-                    'reason' => 'DB-Fehler beim Speichern'
-                ];
-                $io->out("Zeile {$rowNumber}: übersprungen (row_hash={$row['row_hash']})");
             }
-        }
 
-        $io->out("Import abgeschlossen: $importedCount Zeilen gespeichert, $skippedCount übersprungen");
+            $io->out("CSV abgeschlossen: $importedCount Zeilen gespeichert, $skippedCount übersprungen");
 
-        if (!empty($failedRows)) {
-            $io->out("Details zu übersprungenen Zeilen:");
-            foreach ($failedRows as $fail) {
-                $msg = "  Zeile {$fail['rowNumber']}";
-                if (isset($fail['row_hash'])) $msg .= ": row_hash={$fail['row_hash']}";
-                $msg .= " | Grund: {$fail['reason']}";
-                $io->out($msg);
+            if (!empty($failedRows)) {
+                $io->out("Details zu übersprungenen Zeilen:");
+                foreach ($failedRows as $fail) {
+                    $msg = "  Zeile {$fail['rowNumber']}";
+                    if (isset($fail['row_hash'])) $msg .= ": row_hash={$fail['row_hash']}";
+                    $msg .= " | Grund: {$fail['reason']}";
+                    $io->out($msg);
+                }
             }
         }
     }
